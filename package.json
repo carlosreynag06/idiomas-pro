@@ -1,0 +1,30 @@
+{
+  "name": "idiomas-pro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "node scripts/serve.mjs",
+    "typecheck": "tsc --noEmit",
+    "check:export": "node scripts/check-export.mjs",
+    "assets": "node scripts/optimize-assets.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "latest",
+    "@fontsource/instrument-serif": "latest",
+    "gsap": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sharp": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "prettier": "^3.9.10",
+    "typescript": "latest"
+  }
+}
