@@ -120,7 +120,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 650;
   letter-spacing: 0.13em;
   line-height: 1.6;
@@ -161,15 +161,15 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 20px;
   background: var(--blue);
   color: white;
-  font-size: 13px;
-  font-weight: 550;
+  font-size: 16px;
+  font-weight: 650;
   line-height: 1.4;
-  padding: 18px 23px;
+  padding: 17px 24px;
   border-radius: 100px;
-  min-height: 54px;
+  min-height: 56px;
   transition:
     background 0.25s,
     transform 0.25s,
@@ -188,10 +188,28 @@ h3 {
   transform: translate(2px, -2px);
 }
 .button-small {
-  padding: 13px 19px;
-  min-height: 43px;
-  font-size: 12px;
+  padding: 13px 20px;
+  min-height: 48px;
+  font-size: 15px;
   gap: 24px;
+}
+.button-secondary {
+  color: var(--blue);
+  background: white;
+  border: 1.5px solid var(--blue);
+}
+.button-secondary:hover {
+  color: white;
+  background: var(--blue);
+}
+.text-link.light-link {
+  background: var(--lime);
+  color: var(--ink);
+}
+.language-action {
+  margin-top: 28px;
+  width: 100%;
+  justify-content: space-between;
 }
 .button-outline {
   border: 1px solid var(--ink);
@@ -213,25 +231,30 @@ h3 {
 .text-link {
   display: inline-flex;
   align-items: center;
-  gap: 24px;
-  font-weight: 550;
-  font-size: 13px;
-  background: transparent;
-  padding: 0 0 8px;
-  border-bottom: 1px solid currentColor;
+  gap: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  background: var(--blue);
+  padding: 14px 22px;
+  border-bottom: 0;
   line-height: 1.4;
   width: max-content;
   max-width: 100%;
   transition:
     color 0.2s,
     gap 0.2s;
+  min-height: 50px;
+  color: white;
+  border-radius: 100px;
 }
 .text-link:hover {
-  gap: 31px;
-  color: var(--blue);
+  gap: 20px;
+  color: white;
+  background: var(--blue-dark);
 }
 .light-link:hover {
-  color: var(--lime);
+  color: var(--ink);
+  background: #f0f8bb;
 }
 .skip-link {
   position: fixed;
@@ -325,14 +348,14 @@ h3 {
 }
 .desktop-nav {
   display: flex;
-  gap: 27px;
-  margin-left: 30px;
+  gap: 26px;
+  margin-left: 0;
 }
 .desktop-nav a {
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 550;
   position: relative;
-  padding: 9px 0;
+  padding: 13px 0;
 }
 .desktop-nav a:after {
   position: absolute;
@@ -355,11 +378,11 @@ h3 {
 }
 .header-actions {
   display: flex;
-  gap: 22px;
+  gap: 18px;
   align-items: center;
 }
 .header-location {
-  font-size: 10px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -414,7 +437,7 @@ h3 {
 }
 .hero-description {
   color: #666e62;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.75;
 }
 .hero-description strong {
@@ -423,12 +446,13 @@ h3 {
 }
 .hero-buttons {
   display: flex;
-  gap: 24px;
+  gap: 14px;
   align-items: center;
   margin-top: 27px;
+  flex-wrap: wrap;
 }
 .hero-explore {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   display: flex;
   gap: 10px;
@@ -442,7 +466,7 @@ h3 {
   gap: 13px;
   align-items: center;
   margin: 29px 0 0 11px;
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.5;
   color: var(--muted);
 }
@@ -493,7 +517,7 @@ h3 {
   color: white;
   display: flex;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   z-index: 1;
 }
@@ -543,7 +567,7 @@ h3 {
   bottom: 5px;
   left: 0;
   right: 0;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .photo-caption strong {
@@ -564,7 +588,7 @@ h3 {
   right: -27px;
   top: 50%;
   writing-mode: vertical-rl;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.17em;
 }
 .hero-bottom {
@@ -574,7 +598,7 @@ h3 {
   border-top: 1px solid var(--line);
   margin-top: 46px;
   padding: 18px 0 20px;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 550;
   letter-spacing: 0.11em;
 }
@@ -587,22 +611,23 @@ h3 {
   color: var(--muted);
 }
 .proof-strip {
-  background: #eeefe5;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  background: #d9ef77;
+  border-top: 1px solid #bdcf5d;
+  border-bottom: 1px solid #bdcf5d;
 }
 .proof-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.15fr;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  padding: 27px 0;
+  padding: 32px 0;
+  gap: 25px;
 }
 .proof-inner > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 17px;
-  border-right: 1px solid #cdd1c2;
+  gap: 16px;
+  border-right: 1px solid #a7bc4d;
 }
 .proof-inner > div:first-child {
   justify-content: flex-start;
@@ -612,19 +637,21 @@ h3 {
   justify-content: flex-end;
 }
 .proof-inner strong {
-  font-size: 13px;
+  font-size: 18px;
   display: block;
-  font-weight: 550;
+  font-weight: 650;
   line-height: 1.5;
 }
 .proof-inner p span {
-  font-size: 10px;
-  color: var(--muted);
+  font-size: 14px;
+  color: #465426;
   display: block;
   line-height: 1.7;
 }
 .proof-inner svg {
   color: var(--blue);
+  width: 34px;
+  height: 34px;
 }
 .proof-mark {
   font-size: 29px;
@@ -664,7 +691,7 @@ h3 {
   gap: 10px;
 }
 .pill-label {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   border: 1px solid #ffffff60;
   border-radius: 20px;
@@ -675,7 +702,7 @@ h3 {
   border-color: #22262040;
 }
 .language-num {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.07em;
   opacity: 0.7;
 }
@@ -715,7 +742,7 @@ h3 {
   letter-spacing: -0.04em;
 }
 .language-card > p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.8;
   max-width: 430px;
   margin: 14px 0 19px;
@@ -732,7 +759,7 @@ h3 {
 .language-tags span {
   border: 1px solid #ffffff35;
   padding: 5px 8px;
-  font-size: 8px;
+  font-size: 12px;
   border-radius: 3px;
   line-height: 1.5;
 }
@@ -748,7 +775,7 @@ h3 {
   align-items: center;
   justify-content: space-between;
   background: transparent;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 550;
 }
 .language-link:hover svg {
@@ -766,7 +793,7 @@ h3 {
   align-items: center;
   gap: 20px;
   margin-top: 23px;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .language-bottom > span,
@@ -776,7 +803,14 @@ h3 {
   gap: 8px;
 }
 .language-bottom > a {
-  color: var(--ink);
+  color: white;
+  background: var(--blue);
+  padding: 13px 20px;
+  border-radius: 100px;
+  min-height: 48px;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 18px;
 }
 /* Learning in the real world */
 .method-section {
@@ -800,14 +834,14 @@ h3 {
   color: var(--lime);
 }
 .method-copy > p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.9;
   max-width: 430px;
   color: #dce3ff;
 }
 .method-copy .method-last {
   margin: 20px 0 27px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .method-last strong {
   font-weight: 550;
@@ -823,7 +857,7 @@ h3 {
   gap: 20px;
   border-top: 1px solid #ffffff35;
   padding: 23px 0;
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.13em;
 }
 .method-bottom > span:nth-child(even) {
@@ -842,7 +876,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   border-bottom: 1px solid var(--line);
   padding-bottom: 18px;
@@ -857,7 +891,7 @@ h3 {
   height: 5px;
 }
 .demo-situation {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   letter-spacing: 0.12em;
   margin: 29px 0 12px;
@@ -887,7 +921,7 @@ h3 {
 }
 .demo-bubble > span {
   display: block;
-  font-size: 7px;
+  font-size: 11px;
   letter-spacing: 0.11em;
   color: var(--muted);
   width: 100%;
@@ -925,20 +959,23 @@ h3 {
   min-height: 52px;
 }
 .demo-bottom > span {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   max-width: 160px;
   line-height: 1.6;
 }
 .demo-bottom > button {
-  background: transparent;
-  font-size: 10px;
+  background: var(--blue);
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
   text-align: left;
-  color: var(--blue);
+  color: white;
   font-weight: 600;
+  padding: 12px 16px;
+  border-radius: 25px;
+  min-height: 44px;
 }
 .typing-cursor {
   display: inline-block;
@@ -994,7 +1031,7 @@ h3 {
   color: var(--blue);
 }
 .experience-stamp p {
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.6;
   letter-spacing: 0.08em;
   font-weight: 600;
@@ -1008,14 +1045,14 @@ h3 {
   position: absolute;
   bottom: 1px;
   left: 0;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .about-copy h2 {
   margin: 22px 0 26px;
 }
 .about-copy > p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.9;
   margin-bottom: 17px;
@@ -1033,7 +1070,7 @@ h3 {
   display: block;
   font-family: var(--font);
   font-style: normal;
-  font-size: 7px;
+  font-size: 11px;
   letter-spacing: 0.13em;
   line-height: 2.4;
   color: var(--muted);
@@ -1068,7 +1105,7 @@ h3 {
   margin-bottom: 15px;
 }
 .step p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.85;
   color: var(--muted);
   max-width: 320px;
@@ -1117,7 +1154,7 @@ h3 {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  font-size: 13px;
+  font-size: 16px;
   flex-shrink: 0;
 }
 .avatar.peach {
@@ -1130,25 +1167,25 @@ h3 {
   background: #e2dcf0;
 }
 .story-card figcaption strong {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 600;
   display: block;
 }
 .story-card figcaption div > span {
-  font-size: 8px;
+  font-size: 12px;
   color: var(--muted);
   display: block;
   margin-top: 3px;
 }
 .story-language {
-  font-size: 7px;
+  font-size: 11px;
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 4px 7px;
   margin-left: auto;
 }
 .sample-note {
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 18px;
   color: var(--muted);
   text-align: center;
@@ -1168,11 +1205,11 @@ h3 {
   margin: 10px 0 9px;
 }
 .pricing-banner p {
-  font-size: 13px;
+  font-size: 16px;
   color: #5c6641;
 }
 .pricing-banner .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
 }
 .journal-section .section-heading {
   margin-bottom: 37px;
@@ -1224,7 +1261,7 @@ h3 {
   position: absolute;
   left: 15px;
   top: 15px;
-  font-size: 9px;
+  font-size: 12px;
   background: var(--paper);
   border-radius: 20px;
   padding: 5px 9px;
@@ -1234,7 +1271,7 @@ h3 {
   justify-content: space-between;
   margin: 18px 0 12px;
   gap: 10px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.08em;
 }
 .article-meta > span:first-child {
@@ -1255,7 +1292,7 @@ h3 {
   color: var(--blue);
 }
 .article-card > p {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.8;
   margin-top: 11px;
@@ -1285,7 +1322,7 @@ h3 {
   align-items: center;
   padding: 23px 0;
   gap: 20px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.4;
 }
@@ -1293,7 +1330,7 @@ h3 {
   display: none;
 }
 .faq-number {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   font-weight: 400;
 }
@@ -1312,7 +1349,7 @@ h3 {
   padding: 0 35px 24px 33px;
 }
 .faq-answer p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.85;
 }
@@ -1333,13 +1370,13 @@ h3 {
   margin: 19px 0;
 }
 .cta-inner > div > p {
-  font-size: 13px;
+  font-size: 16px;
   color: #55613c;
   max-width: 390px;
   margin-bottom: 24px;
 }
 .cta-footnote {
-  font-size: 9px;
+  font-size: 12px;
   color: #5f6948;
   display: block;
   margin-top: 13px;
@@ -1394,7 +1431,7 @@ h3 {
   color: var(--lime);
 }
 .footer-top > div:first-child > p {
-  font-size: 12px;
+  font-size: 16px;
   color: #b8bfaf;
   line-height: 1.7;
   margin-top: 21px;
@@ -1403,27 +1440,33 @@ h3 {
   display: flex;
   align-items: center;
   gap: 33px;
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 20px;
   color: var(--lime);
   width: max-content;
+  border: 1px solid var(--lime);
+  border-radius: 100px;
+  padding: 12px 18px;
+  font-weight: 600;
 }
 .footer-links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 13px;
+  gap: 11px;
   padding-top: 5px;
 }
 .footer-links .eyebrow {
-  font-size: 8px;
-  color: #a8b09e;
+  font-size: 12px;
+  color: #c9d2ba;
   margin-bottom: 12px;
 }
 .footer-links > a {
-  font-size: 11px;
-  color: #e0e4d7;
+  font-size: 16px;
+  color: #f7f7ef;
   transition: color 0.2s;
+  line-height: 1.5;
+  padding: 4px 0;
 }
 .footer-links > a:hover {
   color: var(--lime);
@@ -1438,7 +1481,7 @@ h3 {
   color: var(--lime);
 }
 .footer-local p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
   margin: 13px 0;
 }
@@ -1446,7 +1489,7 @@ h3 {
   font-weight: 500;
 }
 .footer-local > span:last-child {
-  font-size: 8px;
+  font-size: 12px;
   color: #a8b09e;
   line-height: 1.8;
 }
@@ -1477,8 +1520,9 @@ h3 {
   gap: 25px;
   padding: 23px 0;
   color: #adb4a3;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.015em;
+  line-height: 1.7;
 }
 .footer-bottom > a {
   color: var(--paper);
@@ -1533,7 +1577,7 @@ h3 {
   right: 25px;
   background: var(--lime);
   color: var(--ink);
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   padding: 14px 15px;
   text-align: center;
@@ -1544,7 +1588,7 @@ h3 {
   margin: 25px 0;
 }
 .about-story-copy > p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.85;
   margin-bottom: 18px;
@@ -1582,7 +1626,7 @@ h3 {
   letter-spacing: -0.06em;
 }
 .experience-band span {
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.7;
   color: var(--muted);
 }
@@ -1607,7 +1651,7 @@ h3 {
   margin-bottom: 17px;
 }
 .values-grid p {
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -1625,7 +1669,7 @@ h3 {
   margin: 24px 0;
 }
 .local-story p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   margin: 0 0 19px;
 }
@@ -1692,7 +1736,7 @@ h3 {
   letter-spacing: -0.025em;
 }
 .detail-small {
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   border-top: 1px solid #ffffff55;
   padding-top: 23px;
@@ -1705,7 +1749,7 @@ h3 {
   margin: 22px 0;
 }
 .language-detail-copy > p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   max-width: 440px;
 }
@@ -1725,12 +1769,12 @@ h3 {
   margin-top: 3px;
 }
 .lesson-focus span {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.7;
 }
 .lesson-focus strong {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--ink);
   display: block;
   font-weight: 550;
@@ -1755,7 +1799,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.07em;
   color: var(--muted);
   margin-bottom: 25px;
@@ -1765,7 +1809,7 @@ h3 {
   align-items: center;
   gap: 7px;
   letter-spacing: 0;
-  font-size: 11px;
+  font-size: 14px;
 }
 .pricing-grid {
   display: grid;
@@ -1788,7 +1832,7 @@ h3 {
   border-color: var(--blue);
 }
 .price-card > .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   margin-bottom: 21px;
 }
 .price-card h3 {
@@ -1797,7 +1841,7 @@ h3 {
   letter-spacing: -0.05em;
 }
 .price-card > p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.75;
   min-height: 43px;
   color: var(--muted);
@@ -1817,13 +1861,13 @@ h3 {
   gap: 7px;
 }
 .price > span {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.02em;
   margin-top: 10px;
 }
 .price-frequency {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
 }
 .price-card.featured .price-frequency {
@@ -1850,7 +1894,7 @@ h3 {
   display: flex;
   gap: 9px;
   align-items: flex-start;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.5;
 }
 .price-card li svg {
@@ -1864,7 +1908,7 @@ h3 {
   padding: 16px 17px;
   gap: 15px;
   justify-content: space-between;
-  font-size: 11px;
+  font-size: 16px;
   min-height: 50px;
 }
 .popular-label {
@@ -1875,12 +1919,12 @@ h3 {
   border-radius: 20px;
   padding: 6px 12px;
   color: var(--ink);
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 650;
   letter-spacing: 0.1em;
 }
 .pricing-note {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
   text-align: center;
   max-width: 730px;
@@ -1897,7 +1941,7 @@ h3 {
   gap: 20px;
 }
 .included-strip > span:first-child {
-  font-size: 8px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
 }
@@ -1905,7 +1949,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .included-strip svg {
@@ -1926,7 +1970,7 @@ h3 {
   font-size: 51px;
 }
 .split-heading > div > p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.9;
   margin-bottom: 17px;
@@ -1945,12 +1989,12 @@ h3 {
   margin-bottom: 35px;
 }
 .editorial-note > .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   color: var(--blue);
   margin-bottom: 8px;
 }
 .editorial-note p {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.8;
   max-width: 850px;
@@ -1964,7 +2008,7 @@ h3 {
   margin-bottom: 23px;
 }
 .story-detail {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   margin: 0 0 25px;
   line-height: 1.8;
@@ -1982,7 +2026,7 @@ h3 {
   padding-top: 25px;
 }
 .outcomes-grid article > span {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--blue);
 }
 .outcomes-grid h3 {
@@ -1991,7 +2035,7 @@ h3 {
   line-height: 1.2;
 }
 .outcomes-grid p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.8;
   min-height: 70px;
@@ -2017,7 +2061,7 @@ h3 {
 .journal-filters button {
   padding: 10px 13px;
   border-radius: 30px;
-  font-size: 10px;
+  font-size: 13px;
   background: transparent;
   border: 1px solid transparent;
   transition:
@@ -2042,7 +2086,7 @@ h3 {
 }
 .journal-search input {
   width: 160px;
-  font-size: 11px;
+  font-size: 14px;
   background: transparent;
   border: 0;
   color: var(--ink);
@@ -2054,7 +2098,7 @@ h3 {
   display: flex;
 }
 .results-count {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
   margin: 21px 0 27px;
 }
@@ -2070,7 +2114,7 @@ h3 {
 }
 .empty-state p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   margin: 20px 0;
 }
 .empty-state .text-link {
@@ -2095,7 +2139,7 @@ h3 {
   padding: 16px 17px;
   border: 1px solid var(--line);
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 15px;
   text-align: left;
   transition: background 0.2s;
 }
@@ -2124,7 +2168,7 @@ h3 {
   font-size: 30px;
 }
 .question-contact p {
-  font-size: 12px;
+  font-size: 15px;
   color: var(--muted);
   margin-top: 6px;
 }
@@ -2145,7 +2189,7 @@ h3 {
   top: 40px;
 }
 .legal-grid aside > p {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   margin: 20px 0 14px;
   line-height: 1.8;
@@ -2153,7 +2197,7 @@ h3 {
 .draft-tag {
   padding: 5px 10px;
   background: var(--lime);
-  font-size: 9px;
+  font-size: 12px;
   display: inline-block;
   border-radius: 20px;
 }
@@ -2167,7 +2211,7 @@ h3 {
   padding-top: 24px;
 }
 .legal-grid aside nav a {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
 }
@@ -2188,12 +2232,12 @@ h3 {
   align-items: center;
 }
 .legal-body h2 > span {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--blue);
   letter-spacing: 0;
 }
 .legal-body > section > p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.9;
 }
@@ -2226,7 +2270,7 @@ h3 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   background: transparent;
   padding: 0;
@@ -2243,7 +2287,7 @@ h3 {
   margin: 50px 0 24px;
 }
 .article-heading-meta > span:last-child {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .article-header h1 {
@@ -2275,16 +2319,16 @@ h3 {
   border-radius: 50%;
   background: var(--lime);
   color: var(--blue);
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
 }
 .article-byline strong {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   display: block;
 }
 .article-byline div > span {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 4px;
   display: block;
@@ -2300,7 +2344,7 @@ h3 {
 }
 .article-cover > span {
   display: block;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   color: var(--muted);
   margin-top: 15px;
@@ -2318,7 +2362,7 @@ h3 {
   align-self: flex-start;
 }
 .article-toc > .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   margin-bottom: 23px;
 }
 .article-toc nav {
@@ -2327,7 +2371,7 @@ h3 {
   gap: 16px;
 }
 .article-toc nav a {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.6;
   display: flex;
@@ -2337,7 +2381,7 @@ h3 {
   color: var(--blue);
 }
 .article-toc nav a span {
-  font-size: 8px;
+  font-size: 12px;
   color: var(--blue);
   padding-top: 3px;
 }
@@ -2358,13 +2402,13 @@ h3 {
   font-size: 30px;
 }
 .article-aside-cta p {
-  font-size: 10px;
+  font-size: 13px;
   color: #5e6948;
   margin: 15px 0 22px;
   line-height: 1.8;
 }
 .article-aside-cta .text-link {
-  font-size: 11px;
+  font-size: 16px;
   gap: 15px;
 }
 .article-body > section {
@@ -2391,17 +2435,17 @@ h3 {
   margin-top: 50px;
 }
 .article-author-box strong {
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 600;
 }
 .article-author-box p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.85;
   color: var(--muted);
   margin: 10px 0 18px;
 }
 .article-author-box .text-link {
-  font-size: 10px;
+  font-size: 16px;
 }
 .related-articles {
   background: #eeefe5;
@@ -2454,7 +2498,7 @@ body:has(.booking-dialog[open]) {
   width: 16px;
 }
 .booking-inner > .eyebrow {
-  font-size: 8px;
+  font-size: 12px;
   padding-right: 10px;
 }
 .step-dots {
@@ -2479,7 +2523,7 @@ body:has(.booking-dialog[open]) {
   color: var(--blue);
 }
 .booking-inner > p {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   line-height: 1.8;
 }
@@ -2518,7 +2562,7 @@ body:has(.booking-dialog[open]) {
 }
 .language-options > button > small {
   display: block;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.7;
   margin-top: 10px;
   color: var(--muted);
@@ -2536,7 +2580,7 @@ body:has(.booking-dialog[open]) {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
   margin: 0 0 23px;
 }
@@ -2553,7 +2597,7 @@ body:has(.booking-dialog[open]) {
 }
 .booking-inner label {
   display: block;
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 550;
   line-height: 1.6;
   margin-bottom: 17px;
@@ -2568,7 +2612,7 @@ body:has(.booking-dialog[open]) {
   width: 100%;
   margin-top: 7px;
   padding: 12px;
-  font-size: 12px;
+  font-size: 15px;
   border: 1px solid #cbd0bd;
   border-radius: 3px;
   background: transparent;
@@ -2585,7 +2629,7 @@ body:has(.booking-dialog[open]) {
   gap: 14px;
 }
 .booking-inner .form-note {
-  font-size: 9px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.8;
   margin: 12px 0 17px;
@@ -2612,25 +2656,25 @@ body:has(.booking-dialog[open]) {
   margin: 22px 0;
 }
 .inquiry-summary > span {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--blue);
 }
 .inquiry-summary p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.7;
   margin: 10px 0;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
 .inquiry-summary small {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--muted);
 }
 .copy-email {
   display: block;
   background: transparent;
-  font-size: 10px;
+  font-size: 13px;
   text-decoration: underline;
   text-underline-offset: 4px;
   margin: 18px auto 0;
@@ -2675,7 +2719,7 @@ body:has(.booking-dialog[open]) {
     font-size: 102px;
   }
   .hero .eyebrow {
-    font-size: 9px;
+    font-size: 12px;
   }
   .heading-spark {
     font-size: 58px;
@@ -2685,12 +2729,12 @@ body:has(.booking-dialog[open]) {
     gap: 16px;
   }
   .hero-buttons .button {
-    font-size: 11px;
+    font-size: 16px;
     padding: 17px 18px;
     gap: 17px;
   }
   .hero-explore {
-    font-size: 10px;
+    font-size: 13px;
     gap: 6px;
   }
   .hero-image-wrap {
@@ -2758,7 +2802,7 @@ body:has(.booking-dialog[open]) {
     grid-template-columns: 1.05fr 1fr;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: 16px;
   }
   .hero-buttons {
     flex-direction: column;
@@ -2784,10 +2828,10 @@ body:has(.booking-dialog[open]) {
     left: -30px;
   }
   .proof-inner strong {
-    font-size: 11px;
+    font-size: 14px;
   }
   .proof-inner p span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .proof-inner > div {
     gap: 12px;
@@ -2805,7 +2849,7 @@ body:has(.booking-dialog[open]) {
     align-items: flex-start;
   }
   .pill-label {
-    font-size: 7px;
+    font-size: 11px;
     max-width: 175px;
   }
   .language-big-word {
@@ -2822,16 +2866,16 @@ body:has(.booking-dialog[open]) {
     font-size: 24px;
   }
   .language-card > p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .language-tags span {
-    font-size: 7px;
+    font-size: 11px;
   }
   .method-grid {
     gap: 45px;
   }
   .method-copy > p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .demo-bubble p {
     font-size: 17px;
@@ -2862,7 +2906,7 @@ body:has(.booking-dialog[open]) {
     font-size: 46px;
   }
   .about-copy > p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .experience-stamp {
     right: -7px;
@@ -2895,7 +2939,7 @@ body:has(.booking-dialog[open]) {
     font-size: 23px;
   }
   .article-card > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .footer-top {
     grid-template-columns: 1.2fr 1fr 1fr;
@@ -2905,7 +2949,7 @@ body:has(.booking-dialog[open]) {
     display: none;
   }
   .footer-bottom {
-    font-size: 7px;
+    font-size: 11px;
   }
   .page-intro h1 {
     font-size: 67px;
@@ -2920,7 +2964,7 @@ body:has(.booking-dialog[open]) {
     font-size: 40px;
   }
   .about-story-copy > p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .experience-band > .container {
     gap: 20px;
@@ -2929,7 +2973,7 @@ body:has(.booking-dialog[open]) {
     font-size: 40px;
   }
   .experience-band span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .experience-band > .container > div {
     gap: 11px;
@@ -2947,7 +2991,7 @@ body:has(.booking-dialog[open]) {
     font-size: 45px;
   }
   .local-story p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .language-detail-grid {
     gap: 40px;
@@ -2965,13 +3009,13 @@ body:has(.booking-dialog[open]) {
     font-size: 38px;
   }
   .language-detail-copy > p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .lesson-focus span {
-    font-size: 11px;
+    font-size: 14px;
   }
   .lesson-focus strong {
-    font-size: 12px;
+    font-size: 15px;
   }
   .pricing-grid {
     gap: 14px;
@@ -2983,20 +3027,20 @@ body:has(.booking-dialog[open]) {
     font-size: 24px;
   }
   .price-card > .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
   }
   .price-card > p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .price {
     font-size: 45px;
   }
   .price-card li {
-    font-size: 10px;
+    font-size: 13px;
     gap: 7px;
   }
   .price-card .button {
-    font-size: 10px;
+    font-size: 16px;
     gap: 5px;
     padding: 15px 12px;
   }
@@ -3025,7 +3069,7 @@ body:has(.booking-dialog[open]) {
     gap: 40px;
   }
   .article-toc nav a {
-    font-size: 10px;
+    font-size: 13px;
   }
   .article-aside-cta {
     padding: 20px;
@@ -3043,7 +3087,7 @@ body:has(.booking-dialog[open]) {
     font-size: 22px;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   html {
     scroll-padding-top: 25px;
   }
@@ -3074,8 +3118,8 @@ body:has(.booking-dialog[open]) {
   }
   .header-actions .button {
     padding: 11px 14px;
-    min-height: 37px;
-    font-size: 10px;
+    min-height: 48px;
+    font-size: 14px;
     gap: 14px;
   }
   .header-actions .button svg {
@@ -3110,7 +3154,7 @@ body:has(.booking-dialog[open]) {
     letter-spacing: -1px;
   }
   .mobile-nav > a small {
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0;
     color: var(--muted);
     margin-top: 5px;
@@ -3134,20 +3178,20 @@ body:has(.booking-dialog[open]) {
     padding: 0;
   }
   .hero .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero h1 {
-    font-size: clamp(84px, 16.5vw, 125px);
-    line-height: 0.91;
+    font-size: clamp(60px, 16.5vw, 90px);
+    line-height: 0.94;
     margin: 25px 0 25px;
     letter-spacing: -0.075em;
   }
   .hero h1 br:nth-of-type(2) {
-    display: none;
+    display: block;
   }
   .hero h1 em {
     font-size: 1.15em;
-    margin-left: 12px;
+    margin-left: 0;
   }
   .heading-spark {
     font-size: 47px;
@@ -3155,25 +3199,25 @@ body:has(.booking-dialog[open]) {
     margin: 0 0 0 23px;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.8;
   }
   .hero-description br:first-child {
-    display: none;
+    display: block;
   }
   .hero-buttons {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     gap: 18px;
     margin-top: 23px;
   }
   .hero-buttons .button {
-    font-size: 11px;
+    font-size: 16px;
     padding: 16px 18px;
     gap: 20px;
   }
   .hero-explore {
-    font-size: 9px;
+    font-size: 12px;
     gap: 7px;
   }
   .hero-explore svg {
@@ -3215,26 +3259,26 @@ body:has(.booking-dialog[open]) {
     right: 17px;
   }
   .photo-side-note {
-    font-size: 7px;
+    font-size: 11px;
     right: -24px;
   }
   .photo-coordinate {
-    font-size: 7px;
+    font-size: 11px;
     left: 18px;
     right: 18px;
     bottom: 16px;
   }
   .photo-caption {
-    font-size: 10px;
+    font-size: 13px;
     bottom: 0;
   }
   .hero-bottom {
     margin-top: 28px;
     padding: 17px 0;
-    font-size: 7px;
+    font-size: 11px;
   }
   .hero-bottom > a {
-    font-size: 7px;
+    font-size: 11px;
     gap: 10px;
   }
   .hero-bottom-right {
@@ -3268,10 +3312,10 @@ body:has(.booking-dialog[open]) {
     width: 30px;
   }
   .proof-inner strong {
-    font-size: 12px;
+    font-size: 15px;
   }
   .proof-inner p span {
-    font-size: 10px;
+    font-size: 13px;
   }
   .section-heading {
     align-items: flex-start;
@@ -3285,14 +3329,14 @@ body:has(.booking-dialog[open]) {
     line-height: 1.09;
   }
   .section-heading > p {
-    font-size: 13px;
+    font-size: 16px;
     max-width: 100%;
   }
   .section-heading > p br {
-    display: none;
+    display: block;
   }
   .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     gap: 7px;
     letter-spacing: 0.1em;
   }
@@ -3313,11 +3357,11 @@ body:has(.booking-dialog[open]) {
     align-items: center;
   }
   .pill-label {
-    font-size: 7px;
+    font-size: 11px;
     max-width: none;
   }
   .language-num {
-    font-size: 8px;
+    font-size: 12px;
   }
   .language-big-word {
     font-size: clamp(105px, 22vw, 150px);
@@ -3336,20 +3380,20 @@ body:has(.booking-dialog[open]) {
     font-size: 27px;
   }
   .language-card > p {
-    font-size: 12px;
+    font-size: 15px;
     max-width: none;
   }
   .language-tags span {
-    font-size: 8px;
+    font-size: 12px;
   }
   .language-link {
-    font-size: 12px;
+    font-size: 15px;
   }
   .language-bottom {
     align-items: flex-start;
     flex-direction: column;
     gap: 14px;
-    font-size: 9px;
+    font-size: 12px;
     margin-top: 20px;
   }
   .method-section {
@@ -3366,10 +3410,10 @@ body:has(.booking-dialog[open]) {
   }
   .method-copy > p {
     max-width: none;
-    font-size: 13px;
+    font-size: 16px;
   }
   .method-copy .method-last {
-    font-size: 12px;
+    font-size: 15px;
     margin: 17px 0 25px;
   }
   .conversation-demo {
@@ -3397,20 +3441,20 @@ body:has(.booking-dialog[open]) {
   }
   .demo-bottom > span {
     max-width: 145px;
-    font-size: 8px;
+    font-size: 12px;
   }
   .demo-bottom > button {
-    font-size: 9px;
+    font-size: 12px;
   }
   .method-bottom {
     padding: 19px 0;
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 0.08em;
     gap: 9px;
     flex-wrap: wrap;
   }
   .method-bottom > span:nth-child(even) {
-    font-size: 13px;
+    font-size: 16px;
   }
   .about-grid {
     grid-template-columns: 1fr;
@@ -3432,17 +3476,17 @@ body:has(.booking-dialog[open]) {
     font-size: 58px;
   }
   .experience-stamp p {
-    font-size: 8px;
+    font-size: 12px;
   }
   .about-image-caption {
-    font-size: 9px;
+    font-size: 12px;
   }
   .about-copy h2 {
     font-size: 49px;
     margin: 20px 0 23px;
   }
   .about-copy > p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .about-copy .carlos-signature {
     font-size: 37px;
@@ -3463,7 +3507,7 @@ body:has(.booking-dialog[open]) {
     margin-bottom: 12px;
   }
   .step p {
-    font-size: 13px;
+    font-size: 16px;
     max-width: none;
   }
   .stories-grid {
@@ -3483,17 +3527,17 @@ body:has(.booking-dialog[open]) {
     padding-top: 17px;
   }
   .story-card figcaption strong {
-    font-size: 11px;
+    font-size: 14px;
   }
   .story-card figcaption div > span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .story-language {
     display: block;
-    font-size: 8px;
+    font-size: 12px;
   }
   .sample-note {
-    font-size: 8px;
+    font-size: 12px;
     max-width: 280px;
     line-height: 1.7;
     margin: 20px auto 0;
@@ -3510,15 +3554,15 @@ body:has(.booking-dialog[open]) {
     font-size: 45px;
   }
   .pricing-banner p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .pricing-banner .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
   }
   .pricing-banner .button {
-    font-size: 11px;
+    font-size: 16px;
     padding: 15px 20px;
-    min-height: 49px;
+    min-height: 48px;
   }
   .article-grid {
     grid-template-columns: 1fr;
@@ -3532,10 +3576,10 @@ body:has(.booking-dialog[open]) {
     max-width: 95%;
   }
   .article-card > p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .article-meta {
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 17px;
   }
   .home-faq {
@@ -3556,23 +3600,23 @@ body:has(.booking-dialog[open]) {
     margin-left: 10px;
   }
   .text-link {
-    font-size: 12px;
+    font-size: 16px;
     gap: 20px;
   }
   .faq-item summary {
-    font-size: 13px;
+    font-size: 16px;
     gap: 16px;
     padding: 21px 0;
   }
   .faq-number {
-    font-size: 8px;
+    font-size: 12px;
   }
   .faq-answer {
     padding-left: 27px;
     padding-right: 20px;
   }
   .faq-answer p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .cta-section {
     padding: 51px 0 32px;
@@ -3586,12 +3630,12 @@ body:has(.booking-dialog[open]) {
     margin: 20px 0;
   }
   .cta-inner > div > p {
-    font-size: 12px;
+    font-size: 15px;
     margin-bottom: 23px;
     max-width: 330px;
   }
   .cta-inner .button {
-    font-size: 12px;
+    font-size: 16px;
   }
   .cta-art {
     max-width: 330px;
@@ -3621,21 +3665,21 @@ body:has(.booking-dialog[open]) {
   }
   .footer-top > div:first-child > p {
     margin-top: 17px;
-    font-size: 12px;
+    font-size: 15px;
   }
   .footer-email {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 16px;
   }
   .footer-links {
     gap: 13px;
   }
   .footer-links .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
     margin-bottom: 7px;
   }
   .footer-links > a {
-    font-size: 11px;
+    font-size: 16px;
   }
   .footer-wordmark {
     font-size: 21vw;
@@ -3649,7 +3693,7 @@ body:has(.booking-dialog[open]) {
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 12px;
-    font-size: 7px;
+    font-size: 11px;
     padding: 20px 0;
   }
   .footer-bottom > span:nth-child(2) {
@@ -3672,7 +3716,7 @@ body:has(.booking-dialog[open]) {
     font-size: 1.07em;
   }
   .page-intro > div > p {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.85;
   }
   .about-story-section {
@@ -3687,7 +3731,7 @@ body:has(.booking-dialog[open]) {
     border-radius: 160px 160px 3px 3px;
   }
   .image-label {
-    font-size: 7px;
+    font-size: 11px;
     left: 18px;
     right: 18px;
     bottom: 18px;
@@ -3698,7 +3742,7 @@ body:has(.booking-dialog[open]) {
     margin: 21px 0;
   }
   .about-story-copy > p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .experience-band {
     padding: 26px 0;
@@ -3718,7 +3762,7 @@ body:has(.booking-dialog[open]) {
     font-size: 46px;
   }
   .experience-band span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .experience-band svg {
     width: 34px;
@@ -3739,7 +3783,7 @@ body:has(.booking-dialog[open]) {
     margin-bottom: 15px;
   }
   .values-grid p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .local-story {
     padding: 50px 0;
@@ -3779,27 +3823,27 @@ body:has(.booking-dialog[open]) {
     font-size: 17px;
   }
   .language-detail-visual > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .detail-small {
-    font-size: 7px;
+    font-size: 11px;
   }
   .language-detail-copy h2 {
     font-size: 45px;
     margin: 20px 0;
   }
   .language-detail-copy > p {
-    font-size: 13px;
+    font-size: 16px;
     max-width: none;
   }
   .lesson-focus {
     gap: 22px;
   }
   .lesson-focus span {
-    font-size: 12px;
+    font-size: 15px;
   }
   .lesson-focus strong {
-    font-size: 13px;
+    font-size: 16px;
   }
   .spanish-detail .language-detail-visual,
   .spanish-detail .language-detail-copy {
@@ -3815,11 +3859,11 @@ body:has(.booking-dialog[open]) {
     margin-bottom: 32px;
   }
   .pricing-currency > span:first-child {
-    font-size: 9px;
+    font-size: 12px;
     gap: 5px;
   }
   .pricing-currency > span:last-child {
-    font-size: 7px;
+    font-size: 11px;
     line-height: 2;
   }
   .pricing-grid {
@@ -3830,14 +3874,14 @@ body:has(.booking-dialog[open]) {
     padding: 30px 27px 27px;
   }
   .price-card > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 20px;
   }
   .price-card h3 {
     font-size: 33px;
   }
   .price-card > p {
-    font-size: 13px;
+    font-size: 16px;
     max-width: none;
     min-height: 0;
   }
@@ -3848,18 +3892,18 @@ body:has(.booking-dialog[open]) {
     font-size: 15px;
   }
   .price-frequency {
-    font-size: 11px;
+    font-size: 14px;
   }
   .price-card li {
-    font-size: 12px;
+    font-size: 15px;
     gap: 10px;
   }
   .price-card .button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 17px 19px;
   }
   .pricing-note {
-    font-size: 9px;
+    font-size: 12px;
     margin-top: 23px;
   }
   .included-strip {
@@ -3873,7 +3917,7 @@ body:has(.booking-dialog[open]) {
     margin-bottom: 4px;
   }
   .included-strip > span:not(:first-child) {
-    font-size: 11px;
+    font-size: 14px;
   }
   .pricing-guidance {
     padding: 50px 0;
@@ -3886,7 +3930,7 @@ body:has(.booking-dialog[open]) {
     font-size: 42px;
   }
   .split-heading > div > p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .testimonials-page {
     padding-top: 30px;
@@ -3896,7 +3940,7 @@ body:has(.booking-dialog[open]) {
     margin-bottom: 28px;
   }
   .editorial-note p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .full-stories .story-card {
     padding: 27px;
@@ -3905,7 +3949,7 @@ body:has(.booking-dialog[open]) {
     font-size: 25px;
   }
   .story-detail {
-    font-size: 12px;
+    font-size: 15px;
   }
   .outcomes-grid {
     grid-template-columns: 1fr;
@@ -3916,7 +3960,7 @@ body:has(.booking-dialog[open]) {
     margin: 20px 0 16px;
   }
   .outcomes-grid p {
-    font-size: 13px;
+    font-size: 16px;
     min-height: 0;
     max-width: none;
     margin-bottom: 21px;
@@ -3932,7 +3976,7 @@ body:has(.booking-dialog[open]) {
     gap: 5px;
   }
   .journal-filters button {
-    font-size: 9px;
+    font-size: 12px;
     padding: 9px 11px;
   }
   .journal-search {
@@ -3958,7 +4002,7 @@ body:has(.booking-dialog[open]) {
   }
   .faq-categories button {
     padding: 12px;
-    font-size: 10px;
+    font-size: 13px;
   }
   .question-contact {
     padding: 32px 0;
@@ -3977,7 +4021,7 @@ body:has(.booking-dialog[open]) {
     font-size: 26px;
   }
   .question-contact p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .question-contact .button {
     margin-left: 0;
@@ -3998,7 +4042,7 @@ body:has(.booking-dialog[open]) {
     display: none;
   }
   .legal-grid aside > p {
-    font-size: 10px;
+    font-size: 13px;
     margin: 13px 0;
     display: inline-block;
     margin-right: 15px;
@@ -4012,7 +4056,7 @@ body:has(.booking-dialog[open]) {
     padding-top: 7px;
   }
   .legal-body > section > p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .legal-body > section {
     margin-bottom: 29px;
@@ -4025,7 +4069,7 @@ body:has(.booking-dialog[open]) {
     font-size: 72px;
   }
   .not-found p {
-    font-size: 13px;
+    font-size: 16px;
   }
   .article-header {
     padding: 30px 0;
@@ -4037,10 +4081,10 @@ body:has(.booking-dialog[open]) {
     flex-direction: column;
   }
   .article-heading-meta > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
   }
   .article-heading-meta > span:last-child {
-    font-size: 9px;
+    font-size: 12px;
   }
   .article-header h1 {
     font-size: 50px;
@@ -4053,22 +4097,22 @@ body:has(.booking-dialog[open]) {
     margin: 22px 0;
   }
   .article-byline strong {
-    font-size: 10px;
+    font-size: 13px;
   }
   .article-byline div > span {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.5;
   }
   .author-avatar {
     width: 39px;
     height: 39px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .article-cover > img {
     height: 300px;
   }
   .article-cover > span {
-    font-size: 6px;
+    font-size: 11px;
     margin-top: 12px;
   }
   .article-body-layout {
@@ -4088,7 +4132,7 @@ body:has(.booking-dialog[open]) {
     gap: 10px;
   }
   .article-toc nav a {
-    font-size: 11px;
+    font-size: 14px;
   }
   .article-aside-cta {
     display: none;
@@ -4098,7 +4142,7 @@ body:has(.booking-dialog[open]) {
     margin-bottom: 17px;
   }
   .article-body > section > p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.9;
     margin-bottom: 17px;
   }
@@ -4111,7 +4155,7 @@ body:has(.booking-dialog[open]) {
     gap: 15px;
   }
   .article-author-box p {
-    font-size: 11px;
+    font-size: 14px;
   }
   .related-articles .section-heading h2 {
     font-size: 40px;
@@ -4123,11 +4167,11 @@ body:has(.booking-dialog[open]) {
     font-size: 51px;
   }
   .booking-inner > .eyebrow {
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 0.08em;
   }
   .booking-inner > p {
-    font-size: 12px;
+    font-size: 15px;
   }
   .field-row {
     grid-template-columns: 1fr;
@@ -4140,11 +4184,11 @@ body:has(.booking-dialog[open]) {
     padding: 18px 13px;
   }
   .language-options > button > small {
-    font-size: 8px;
+    font-size: 12px;
     max-width: 110px;
   }
   .booking-inner .form-note {
-    font-size: 9px;
+    font-size: 12px;
   }
 }
 @media (max-width: 380px) {
@@ -4152,7 +4196,7 @@ body:has(.booking-dialog[open]) {
     width: calc(100% - 36px);
   }
   .header-actions .button {
-    font-size: 9px;
+    font-size: 14px;
     padding: 10px 12px;
     gap: 10px;
   }
@@ -4161,10 +4205,10 @@ body:has(.booking-dialog[open]) {
     gap: 6px;
   }
   .hero h1 {
-    font-size: 80px;
+    font-size: 60px;
   }
   .hero h1 em {
-    margin-left: 7px;
+    margin-left: 0;
   }
   .heading-spark {
     font-size: 37px;
@@ -4174,12 +4218,12 @@ body:has(.booking-dialog[open]) {
     gap: 13px;
   }
   .hero-buttons .button {
-    font-size: 10px;
+    font-size: 16px;
     gap: 13px;
     padding: 15px;
   }
   .hero-explore {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-image-wrap {
     height: 390px;
@@ -4188,10 +4232,10 @@ body:has(.booking-dialog[open]) {
     padding: 22px;
   }
   .pill-label {
-    font-size: 6px;
+    font-size: 11px;
   }
   .language-num {
-    font-size: 7px;
+    font-size: 11px;
   }
   .language-big-word {
     font-size: 100px;
@@ -4204,7 +4248,7 @@ body:has(.booking-dialog[open]) {
     font-size: 130px;
   }
   .method-bottom {
-    font-size: 6px;
+    font-size: 11px;
   }
   .conversation-demo {
     padding: 18px;
@@ -4222,7 +4266,7 @@ body:has(.booking-dialog[open]) {
     gap: 8px;
   }
   .story-language {
-    font-size: 7px;
+    font-size: 11px;
   }
   .cta-inner h2 {
     font-size: 46px;
@@ -4253,7 +4297,7 @@ body:has(.booking-dialog[open]) {
     font-size: 20.5vw;
   }
   .footer-bottom {
-    font-size: 6px;
+    font-size: 11px;
   }
 }
 @media (min-width: 1001px) and (max-height: 850px) {
@@ -4271,7 +4315,7 @@ body:has(.booking-dialog[open]) {
     padding-top: 7px;
   }
   .hero-description {
-    font-size: 13px;
+    font-size: 16px;
   }
   .hero-buttons {
     margin-top: 22px;

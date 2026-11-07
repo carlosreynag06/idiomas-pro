@@ -77,13 +77,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
         <div className="container article-cover">
           <Image
             src={a.image}
-            alt={
-              a.image.includes('materials')
-                ? 'Vocabulary cards and an open language notebook'
-                : a.image.includes('learner')
-                  ? 'A student practicing speaking during a private lesson'
-                  : 'An adult practicing a new language with a personal tutor'
-            }
+            alt={a.imageAlt}
             width={1500}
             height={800}
             priority

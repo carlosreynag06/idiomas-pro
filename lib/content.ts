@@ -5,6 +5,7 @@ export type Article = {
   excerpt: string;
   readTime: string;
   image: string;
+  imageAlt: string;
   imagePosition?: string;
   sections: { title: string; paragraphs: string[] }[];
 };
@@ -16,7 +17,8 @@ export const articles: Article[] = [
     excerpt:
       'The English that matters at the front desk, in an interview, and when a guest needs a little extra help.',
     readTime: '6 min read',
-    image: '/images/study-materials.webp',
+    image: '/images/journal-english-at-work.webp',
+    imageAlt: 'An adult learner rehearsing a professional English conversation with a tutor',
     sections: [
       {
         title: 'In Puerto Plata, English is a working skill.',
@@ -54,7 +56,8 @@ export const articles: Article[] = [
     excerpt:
       'A practical starting point for foreigners who want to feel at home on the Dominican north coast.',
     readTime: '5 min read',
-    image: '/images/confident-learner.webp',
+    image: '/images/journal-spanish-everyday.webp',
+    imageAlt: 'An adult learner speaking Spanish with a conversation partner',
     sections: [
       {
         title: 'Go beyond ordering your morning coffee.',
@@ -91,7 +94,8 @@ export const articles: Article[] = [
     title: 'What makes a private lesson worth your time?',
     excerpt: 'Less waiting for your turn. More practice with the words you actually need.',
     readTime: '5 min read',
-    image: '/images/personal-lesson.webp',
+    image: '/images/journal-private-lessons.webp',
+    imageAlt: 'A learner and teacher practicing together over an open language notebook',
     sections: [
       {
         title: 'A lesson should begin with your life.',
@@ -128,8 +132,9 @@ export const articles: Article[] = [
     title: 'Spanish you will hear on an ordinary Tuesday.',
     excerpt: 'Friendly everyday phrases to help you follow the conversation in Puerto Plata.',
     readTime: '4 min read',
-    image: '/images/confident-learner.webp',
-    imagePosition: 'center 70%',
+    image: '/images/journal-spanish-listening.webp',
+    imageAlt: 'Ceramic conversation bubbles beside vocabulary cards and a language notebook',
+    imagePosition: 'center center',
     sections: [
       {
         title: 'Start with a greeting, and give it a moment.',
@@ -166,8 +171,9 @@ export const articles: Article[] = [
     title: '“Tell me about yourself.” You have got this.',
     excerpt: 'How to prepare for an English interview without sounding like a memorized script.',
     readTime: '6 min read',
-    image: '/images/study-materials.webp',
-    imagePosition: 'left center',
+    image: '/images/journal-interview-practice.webp',
+    imageAlt: 'A learner rehearsing an English job interview with a practice partner',
+    imagePosition: 'center center',
     sections: [
       {
         title: 'Prepare ideas before perfect sentences.',
@@ -205,8 +211,9 @@ export const articles: Article[] = [
     title: 'Some things are better across a real table.',
     excerpt: 'Why we keep our language lessons personal, local, and entirely in person.',
     readTime: '5 min read',
-    image: '/images/study-materials.webp',
-    imagePosition: 'center 65%',
+    image: '/images/journal-real-conversation.webp',
+    imageAlt: 'An adult learner speaking face to face with a tutor across a blue studio table',
+    imagePosition: 'center center',
     sections: [
       {
         title: 'A conversation has more than words.',

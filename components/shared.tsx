@@ -20,7 +20,7 @@ export function Eyebrow({
     </span>
   );
 }
-export function CTA() {
+export function CTA({ artwork = 'cobalt' }: { artwork?: 'cobalt' | 'charcoal' }) {
   return (
     <section className="cta-section">
       <div className="container cta-inner" data-reveal>
@@ -37,10 +37,15 @@ export function CTA() {
         </div>
         <div className="cta-art">
           <Image
-            src="/images/conversation-sculpture.webp"
-            alt="Original cobalt and citron ceramic conversation sculptures created in Blender"
+            src={
+              artwork === 'charcoal'
+                ? '/images/conversation-sculpture-charcoal.webp'
+                : '/images/conversation-sculpture.webp'
+            }
+            alt="Two ceramic speech bubbles representing English and Spanish conversations"
             width={600}
             height={500}
+            loading="eager"
           />
           <span className="art-annotation">A little hello goes a long way. ↗</span>
         </div>
@@ -72,15 +77,10 @@ export function ArticleCard({ article, index = 0 }: { article: Article; index?: 
       <div className="article-image">
         <Image
           src={article.image}
-          alt={
-            article.category === 'ENGLISH AT WORK'
-              ? 'A language notebook, vocabulary cards, and pencils on a study desk'
-              : article.image.includes('learner')
-                ? 'A student speaking with confidence during an individual language lesson'
-                : 'An adult practicing conversation during a private language lesson'
-          }
+          alt={article.imageAlt}
           width={720}
           height={510}
+          loading="eager"
           style={{ objectPosition: article.imagePosition }}
         />
         <span className="article-arrow">
@@ -218,9 +218,7 @@ export function PriceCards({ compact = false }: { compact?: boolean }) {
                 </li>
               ))}
             </ul>
-            <BookButton className={`button ${p.featured ? 'button-lime' : 'button-outline'}`}>
-              {p.cta}
-            </BookButton>
+            <BookButton className={`button ${p.featured ? 'button-lime' : ''}`}>{p.cta}</BookButton>
           </article>
         ))}
       </div>

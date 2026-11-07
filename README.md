@@ -2,7 +2,7 @@
 
 A complete Next.js App Router website for Carlos Reyna’s private, in-person English and Spanish lessons in Puerto Plata, Dominican Republic.
 
-The visual direction centers on people learning and finding their voice: cobalt, ivory, citron, expressive editorial photography, oversized type, and an original Blender conversation sculpture. Location supports the service; the visual subject is language learning.
+The homepage uses a coordinated charcoal, citron, white, and muted sage palette, with deep-green buttons and UI accents. The section sequence is defined in `app/homepage.css`, including the header and inquiry dialog; the footer retains its original styling. Photography, oversized typography, and original Blender artwork keep the focus on people learning and finding their voice. See `docs/COLOR-SYSTEM.md` for the section map.
 
 ## Run locally
 
@@ -73,15 +73,20 @@ Set `NEXT_PUBLIC_SITE_URL` to the actual public domain before deployment; the cu
 npm run typecheck
 npm run build
 npm run check:export
+npm run check:preview
 ```
 
 The export check validates generated page headings/descriptions, internal links and anchors, local images, and the presence of all six article pages.
+
+The preview check requires the local server to be running. It requests and decodes every homepage image over HTTP and checks that all six use distinct sources. Keep the terminal running while viewing localhost so images and page navigation remain available.
 
 ## Assets and animation
 
 Photographs were created with the built-in ImageGen tool, then optimized to WebP with Sharp. The original Blender sculpture is retained as an editable `.blend` file and a reproducible Python script. See `docs/ASSETS.md` for exact final prompts and saved paths.
 
 GSAP provides the homepage entrance sequence and viewport reveals. The conversation demo uses React and JavaScript for progressive typing. DM Sans and Instrument Serif are served locally via Fontsource.
+
+Each article has its own original cover; journal cards do not reuse the hero photograph. The six newer prompts and source paths are documented in `docs/JOURNAL-ASSETS.md`.
 
 ## Deployment
 

@@ -8,6 +8,7 @@
     "start": "node scripts/serve.mjs",
     "typecheck": "tsc --noEmit",
     "check:export": "node scripts/check-export.mjs",
+    "check:preview": "node scripts/check-preview.mjs",
     "assets": "node scripts/optimize-assets.mjs"
   },
   "dependencies": {

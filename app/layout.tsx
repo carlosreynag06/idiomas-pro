@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import '@fontsource-variable/dm-sans';
 import '@fontsource/instrument-serif/latin-400-italic.css';
 import './globals.css';
+import './homepage.css';
 import { SiteShell } from '@/components/site-shell';
 import { site } from '@/lib/site';
 

@@ -1,6 +1,6 @@
 # Original visual assets
 
-The three final photographs were generated with the built-in ImageGen tool. They illustrate the language-learning experience; they do not depict Carlos or actual students. The original travel-led assets were removed following the design correction.
+The three primary photographs were generated with the built-in ImageGen tool. They illustrate the language-learning experience; they do not depict Carlos or actual students. The original travel-led assets were removed following the design correction. Six additional, distinct article covers are documented in `docs/JOURNAL-ASSETS.md`.
 
 ## confident-learner
 
@@ -46,5 +46,12 @@ Final prompt:
 - Optimized asset: `public/images/conversation-sculpture.webp`
 
 Two ceramic speech bubbles in cobalt and citron, with dimensional dots, soft studio lighting, and a transparent background. Created and rendered with the locally installed Blender 5.2 LTS using Cycles.
+
+The homepage also has a charcoal-and-citron variant, created in Blender with the same geometry and lighting:
+
+- Editable scene: `assets/blender/conversation-charcoal.blend`
+- Full-resolution render: `public/images/conversation-sculpture-charcoal.png`
+- Optimized homepage asset: `public/images/conversation-sculpture-charcoal.webp`
+- Reproduce with Blender: `blender --background --python scripts/create-conversation-art.py -- --charcoal`
 
 Run `npm run assets` to regenerate optimized WebP assets and the social sharing cover from the retained originals. Fonts are installed locally through Fontsource; the website makes no Google Fonts request.

@@ -8,6 +8,12 @@ for (const [name, width, quality] of [
   ['confident-learner', 1600, 88],
   ['personal-lesson', 1400, 88],
   ['study-materials', 1400, 88],
+  ['journal-private-lessons', 1200, 86],
+  ['journal-real-conversation', 1200, 86],
+  ['journal-spanish-everyday', 1200, 86],
+  ['journal-english-at-work', 1200, 86],
+  ['journal-spanish-listening', 1200, 86],
+  ['journal-interview-practice', 1200, 86],
 ]) {
   await sharp(path.join(root, 'assets', 'imagegen', `${name}-original.png`))
     .resize({ width, withoutEnlargement: true })
@@ -18,6 +24,10 @@ await sharp(path.join(images, 'conversation-sculpture.png'))
   .resize({ width: 900, withoutEnlargement: true })
   .webp({ quality: 92, alphaQuality: 100 })
   .toFile(path.join(images, 'conversation-sculpture.webp'));
+await sharp(path.join(images, 'conversation-sculpture-charcoal.png'))
+  .resize({ width: 900, withoutEnlargement: true })
+  .webp({ quality: 92, alphaQuality: 100 })
+  .toFile(path.join(images, 'conversation-sculpture-charcoal.webp'));
 const image = await sharp(path.join(images, 'confident-learner.webp'))
   .resize(500, 630, { fit: 'cover' })
   .toBuffer();
@@ -31,4 +41,4 @@ await sharp({ create: { width: 1200, height: 630, channels: 3, background: '#f7f
   ])
   .jpeg({ quality: 90 })
   .toFile(path.join(images, 'og-cover.jpg'));
-console.log('Optimized 4 original assets and generated the social sharing cover.');
+console.log('Optimized learning and journal assets and generated the social sharing cover.');

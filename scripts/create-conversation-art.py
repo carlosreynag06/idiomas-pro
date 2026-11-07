@@ -1,8 +1,9 @@
 """Editable Blender sculpture for Idiomas Pro. Run with Blender --background --python."""
-import bpy, math, os
+import bpy, math, os, sys
 from mathutils import Vector
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CHARCOAL = '--charcoal' in sys.argv
 bpy.ops.object.select_all(action='SELECT')
 bpy.ops.object.delete(use_global=False)
 scene = bpy.context.scene
@@ -26,7 +27,7 @@ def material(name, color, metallic=0, roughness=.3):
     p.inputs['Roughness'].default_value = roughness
     return m
 
-blue = material('Idiomas cobalt glazed ceramic', (.018,.065,.8), .25, .22)
+blue = material('Charcoal glazed ceramic' if CHARCOAL else 'Idiomas cobalt glazed ceramic', (.014,.0185,.013) if CHARCOAL else (.018,.065,.8), .25, .22)
 lime = material('Citron glazed ceramic', (.65,.85,.08), .12,.29)
 white = material('Ivory lettering', (.96,.96,.86), 0,.32)
 
@@ -72,6 +73,8 @@ cam.data.type='ORTHO';cam.data.ortho_scale=7.2
 scene.camera=cam
 os.makedirs(os.path.join(ROOT,'assets','blender'),exist_ok=True)
 os.makedirs(os.path.join(ROOT,'public','images'),exist_ok=True)
-bpy.ops.wm.save_as_mainfile(filepath=os.path.join(ROOT,'assets','blender','conversation.blend'))
-scene.render.filepath=os.path.join(ROOT,'public','images','conversation-sculpture.png')
+scene_name = 'conversation-charcoal.blend' if CHARCOAL else 'conversation.blend'
+render_name = 'conversation-sculpture-charcoal.png' if CHARCOAL else 'conversation-sculpture.png'
+bpy.ops.wm.save_as_mainfile(filepath=os.path.join(ROOT,'assets','blender',scene_name))
+scene.render.filepath=os.path.join(ROOT,'public','images',render_name)
 bpy.ops.render.render(write_still=True)

@@ -95,9 +95,6 @@ function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <span className="header-location">
-            <span className="status-dot" /> In person. In Puerto Plata.
-          </span>
           <BookButton className="button button-small">Let’s talk</BookButton>
           <button
             className="menu-toggle"

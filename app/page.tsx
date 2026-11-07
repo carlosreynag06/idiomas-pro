@@ -1,21 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  ArrowDown,
-  ArrowUpRight,
-  ArrowRight,
-  Globe2,
-  MessageCircle,
-  MapPin,
-  Sparkles,
-} from 'lucide-react';
+import { ArrowDown, ArrowUpRight, MapPin } from 'lucide-react';
 import { BookButton } from '@/components/site-shell';
 import { CTA, Eyebrow, FAQList, JournalPreview, Steps, StoryCards } from '@/components/shared';
 import { ConversationDemo } from '@/components/conversation-demo';
+import { TrustBand } from '@/components/trust-band';
 
 export default function Home() {
   return (
-    <main id="main">
+    <main id="main" className="homepage">
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
@@ -41,19 +34,9 @@ export default function Home() {
             </p>
             <div className="hero-buttons hero-animate">
               <BookButton>Find your first words</BookButton>
-              <a href="#languages" className="hero-explore">
-                A little more about us <ArrowDown size={17} />
+              <a href="#languages" className="button button-secondary">
+                Explore the lessons <ArrowDown size={17} />
               </a>
-            </div>
-            <div className="hero-note hero-animate">
-              <span className="handdrawn-arrow" aria-hidden="true">
-                ↳
-              </span>
-              <span>
-                No screens between us.
-                <br />
-                <strong>Just a good conversation.</strong>
-              </span>
             </div>
           </div>
           <div className="hero-visual hero-animate">
@@ -78,48 +61,7 @@ export default function Home() {
                 ✳
               </span>
             </div>
-            <div className="photo-caption">
-              <span className="caption-line" />
-              <span>
-                A little practice.
-                <br />
-                <strong>A lot more you.</strong>
-              </span>
-              <MapPin size={23} />
-            </div>
             <span className="photo-side-note">SMALL STEPS. REAL CONVERSATIONS.</span>
-          </div>
-        </div>
-        <div className="container hero-bottom">
-          <span>GOOD WORDS. REAL CONNECTIONS.</span>
-          <a href="#languages">
-            SCROLL TO FIND YOURS <ArrowDown size={14} />
-          </a>
-          <span className="hero-bottom-right">LOCAL ROOTS. OPEN DOORS. ↗</span>
-        </div>
-      </section>
-      <section className="proof-strip" aria-label="Our approach">
-        <div className="container proof-inner">
-          <div>
-            <span className="proof-mark">01 /</span>
-            <p>
-              <strong>One teacher. All you.</strong>
-              <span>Private lessons with Carlos Reyna</span>
-            </p>
-          </div>
-          <div>
-            <Globe2 size={29} strokeWidth={1.3} />
-            <p>
-              <strong>Two languages. Real life.</strong>
-              <span>English & Spanish, your way</span>
-            </p>
-          </div>
-          <div>
-            <MessageCircle size={29} strokeWidth={1.3} />
-            <p>
-              <strong>Hundreds of students taught.</strong>
-              <span>Across the Dominican Republic & US</span>
-            </p>
           </div>
         </div>
       </section>
@@ -161,7 +103,7 @@ export default function Home() {
                 <span>Work & interviews</span>
                 <span>Your next opportunity</span>
               </div>
-              <BookButton language="English" className="language-link">
+              <BookButton language="English" className="button button-lime language-action">
                 Let’s talk English
               </BookButton>
             </article>
@@ -183,7 +125,7 @@ export default function Home() {
                 <span>Natural conversations</span>
                 <span>Start from zero</span>
               </div>
-              <BookButton language="Spanish" className="language-link">
+              <BookButton language="Spanish" className="button language-action">
                 Let’s talk Spanish
               </BookButton>
             </article>
@@ -223,16 +165,8 @@ export default function Home() {
             <ConversationDemo />
           </div>
         </div>
-        <div className="method-bottom container">
-          <span>REAL SITUATIONS</span>
-          <span aria-hidden="true">✳</span>
-          <span>YOUR PACE</span>
-          <span aria-hidden="true">✳</span>
-          <span>LOTS OF TALKING</span>
-          <span aria-hidden="true">✳</span>
-          <span>A LITTLE BRAVERY</span>
-        </div>
       </section>
+      <TrustBand />
       <section className="section about-preview">
         <div className="container about-grid">
           <div className="about-visual" data-reveal>
@@ -242,6 +176,7 @@ export default function Home() {
                 alt="A focused one-to-one language lesson with notebooks and personal feedback"
                 width={900}
                 height={1000}
+                loading="eager"
               />
             </div>
             <div className="experience-stamp">
@@ -326,7 +261,7 @@ export default function Home() {
             </h2>
             <p>One lesson to get going, or a little momentum every week.</p>
           </div>
-          <Link href="/pricing/" className="button button-outline">
+          <Link href="/pricing/" className="button">
             Explore lesson plans <ArrowUpRight size={19} />
           </Link>
         </div>
@@ -348,7 +283,7 @@ export default function Home() {
           <FAQList limit={4} />
         </div>
       </section>
-      <CTA />
+      <CTA artwork="charcoal" />
     </main>
   );
 }

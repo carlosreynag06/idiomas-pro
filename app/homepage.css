@@ -1,0 +1,197 @@
+/* Shared homepage tokens. The footer keeps its existing styles and colors. */
+body:has(.homepage) {
+  --home-charcoal: #20251e;
+  --home-citron: #e4ef9a;
+  --home-sage: #e3ebe0;
+  --home-action: #35533e;
+  --home-action-hover: #263f2e;
+  --home-muted: #5b6759;
+  --home-line: #ccd6c6;
+  background: #ffffff;
+}
+
+body:has(.homepage) :is(.header, .booking-dialog),
+.homepage {
+  --paper: #ffffff;
+  --ink: var(--home-charcoal);
+  --muted: var(--home-muted);
+  --line: var(--home-line);
+  --lime: var(--home-citron);
+  /* Aliases for shared components that also serve the other pages. */
+  --blue: var(--home-action);
+  --blue-dark: var(--home-action-hover);
+  color: var(--ink);
+}
+
+body:has(.homepage) :is(.header, .booking-dialog),
+.homepage {
+  background: #ffffff;
+}
+body:has(.homepage) .booking-dialog .language-options > button.selected {
+  background: #edf3e7;
+}
+body:has(.homepage) .booking-dialog .inquiry-summary {
+  background: var(--home-sage);
+}
+
+/* Dark anchors: hero, trust band, and the existing footer. */
+.homepage .hero {
+  padding-bottom: 38px;
+  background: var(--home-charcoal);
+  color: #f7f7ef;
+}
+.homepage .hero h1 em,
+.homepage .hero .heading-spark,
+.homepage .hero .little-star {
+  color: var(--home-citron);
+}
+.homepage .hero .eyebrow {
+  color: #dfe5d7;
+}
+.homepage .hero-description,
+.homepage .hero .photo-side-note {
+  color: #c4cdbb;
+}
+.homepage .hero-description strong {
+  color: #f7f7ef;
+}
+.homepage .hero .hello-sticker {
+  color: var(--home-charcoal);
+}
+.homepage .hero .button {
+  background: var(--home-citron);
+  color: var(--home-charcoal);
+}
+.homepage .hero .button:hover {
+  background: #f0f8bb;
+}
+.homepage .hero .button-secondary {
+  background: transparent;
+  color: #f7f7ef;
+  border-color: #f7f7ef80;
+}
+.homepage .hero .button-secondary:hover {
+  background: #f7f7ef;
+  color: var(--home-charcoal);
+}
+.homepage .hero-visual {
+  padding-bottom: 0;
+}
+.homepage .proof-strip {
+  display: grid;
+  align-items: center;
+  min-height: 210px;
+  padding: clamp(24px, 3.125vw, 45px) 0;
+  background: var(--home-charcoal);
+  color: #f7f7ef;
+  border-color: #f7f7ef24;
+}
+.homepage .proof-inner {
+  padding: 0;
+}
+.homepage .proof-inner > div {
+  border-color: #f7f7ef30;
+}
+.homepage .proof-inner svg {
+  color: var(--home-citron);
+}
+.homepage .proof-inner p span {
+  color: #c4cdbb;
+}
+
+/* White sections carry photography, choices, stories, and articles. */
+.homepage :is(.language-section, .about-preview, .stories-section, .journal-section) {
+  background: #ffffff;
+}
+.homepage .english-card {
+  background: var(--home-sage);
+  color: var(--ink);
+}
+.homepage .spanish-card {
+  background: #f0f4d5;
+}
+.homepage .english-card .language-big-word {
+  color: var(--home-action);
+}
+.homepage :is(.english-card, .spanish-card) > p {
+  color: var(--home-muted);
+}
+.homepage :is(.english-card, .spanish-card) :is(.pill-label, .language-tags span) {
+  border-color: #b7c4b0;
+}
+.homepage .english-card .button-lime,
+.homepage .method-section .light-link {
+  background: var(--home-action);
+  color: #ffffff;
+}
+.homepage .english-card .button-lime:hover,
+.homepage .method-section .light-link:hover {
+  background: var(--home-action-hover);
+}
+
+/* Sage creates a repeated rhythm for method, next steps, and practical answers. */
+.homepage :is(.method-section, .steps-section, .home-faq) {
+  background: var(--home-sage);
+  color: var(--ink);
+}
+.homepage :is(.steps-section, .home-faq) {
+  padding-block: clamp(68px, 7.4vw, 106px);
+}
+.homepage .method-section .eyebrow.light,
+.homepage .method-copy > p {
+  color: var(--home-muted);
+}
+.homepage .method-copy h2 em,
+.homepage .method-section .little-star {
+  color: var(--home-action);
+}
+.homepage .method-last strong {
+  color: var(--ink);
+}
+.homepage .conversation-demo {
+  background: #ffffff;
+  border: 1px solid #d1dbcb;
+  box-shadow: 12px 12px 0 #c8d4c0;
+}
+.homepage .demo-bubble.teacher {
+  background: #edf1e9;
+}
+.homepage .demo-bubble.student p {
+  color: #435236;
+}
+.homepage .demo-bubble.student.has-reply p {
+  color: var(--ink);
+}
+.homepage .story-card {
+  background: #f4f7f1;
+  border-color: var(--home-line);
+}
+.homepage .avatar.peach {
+  background: #e0e8d7;
+}
+.homepage .avatar.lavender {
+  background: #c9d7bf;
+}
+
+/* Citron marks the two conversion moments before the charcoal close. */
+.homepage :is(.pricing-banner, .cta-section) {
+  background: var(--home-citron);
+}
+.homepage .pricing-banner p,
+.homepage .cta-inner > div > p,
+.homepage .cta-footnote {
+  color: #4f5e40;
+}
+.homepage .button:hover {
+  box-shadow: 0 6px 20px #20251e18;
+}
+body:has(.homepage) .header .button:hover {
+  box-shadow: 0 6px 20px #20251e18;
+}
+body:has(.homepage) :is(.header, .booking-dialog) :is(a, button, summary):focus-visible,
+.homepage :is(a, button, summary):focus-visible {
+  outline-color: var(--home-action);
+}
+.homepage .hero :is(a, button):focus-visible {
+  outline-color: #f7f7ef;
+}
