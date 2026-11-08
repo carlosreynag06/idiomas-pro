@@ -246,7 +246,7 @@ export function PricingPage() {
               <br />
               the details together.
             </p>
-            <Link href="/faq/" className="pp-inline-link">
+            <Link href="/preguntas-frecuentes/" className="pp-inline-link">
               More questions? Start here <ArrowUpRight size={17} />
             </Link>
           </div>

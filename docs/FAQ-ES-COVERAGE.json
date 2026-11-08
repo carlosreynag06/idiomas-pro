@@ -1,0 +1,134 @@
+[
+  {
+    "source": "lib/content.ts",
+    "question": "Are all lessons really in person?",
+    "target": "/preguntas-frecuentes/#pregunta-presencial",
+    "spanishQuestion": "¿Todas las clases son realmente presenciales?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "Do I need to know any English or Spanish already?",
+    "target": "/preguntas-frecuentes/#pregunta-nivel",
+    "spanishQuestion": "¿Necesito saber algo de inglés o español antes de comenzar?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "Who will teach my lessons?",
+    "target": "/preguntas-frecuentes/#pregunta-profesor",
+    "spanishQuestion": "¿Quién impartirá mis clases?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "Where in Puerto Plata do we meet?",
+    "target": "/preguntas-frecuentes/#pregunta-lugar",
+    "spanishQuestion": "¿En qué lugar de Puerto Plata nos encontramos?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "Can I focus on English for hotel or resort work?",
+    "target": "/preguntas-frecuentes/#pregunta-ingles-trabajo",
+    "spanishQuestion": "¿Podemos enfocarnos en inglés para trabajar en hoteles o resorts?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "I am a foreigner living here. Can I learn practical Spanish?",
+    "target": "/preguntas-frecuentes/#pregunta-espanol-practico",
+    "spanishQuestion": "Soy extranjero y vivo aquí. ¿Puedo aprender español práctico?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "How long is a lesson?",
+    "target": "/preguntas-frecuentes/#pregunta-duracion",
+    "spanishQuestion": "¿Cuánto dura una clase?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "Can I reschedule a lesson?",
+    "target": "/preguntas-frecuentes/#pregunta-reprogramar",
+    "spanishQuestion": "¿Puedo reprogramar una clase?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "How do I book and pay?",
+    "target": "/preguntas-frecuentes/#pregunta-reserva",
+    "spanishQuestion": "¿Cómo reservo y pago?"
+  },
+  {
+    "source": "lib/content.ts",
+    "question": "How quickly will I become fluent?",
+    "target": "/preguntas-frecuentes/#pregunta-progreso",
+    "spanishQuestion": "¿En cuánto tiempo hablaré con fluidez?"
+  },
+  {
+    "source": "components/about-carlos.tsx",
+    "question": "Will you be my teacher for every lesson?",
+    "target": "/preguntas-frecuentes/#pregunta-siempre-carlos",
+    "spanishQuestion": "¿Carlos será mi profesor en todas las clases?"
+  },
+  {
+    "source": "components/about-carlos.tsx",
+    "question": "Do I need to know any English or Spanish already?",
+    "target": "/preguntas-frecuentes/#pregunta-nivel",
+    "spanishQuestion": "¿Necesito saber algo de inglés o español antes de comenzar?"
+  },
+  {
+    "source": "components/about-carlos.tsx",
+    "question": "Where do the lessons happen?",
+    "target": "/preguntas-frecuentes/#pregunta-donde",
+    "spanishQuestion": "¿Dónde se realizan las clases?"
+  },
+  {
+    "source": "components/languages-page.tsx",
+    "question": "Can I start as a complete beginner?",
+    "target": "/preguntas-frecuentes/#pregunta-desde-cero",
+    "spanishQuestion": "¿Puedo comenzar si soy principiante absoluto?"
+  },
+  {
+    "source": "components/languages-page.tsx",
+    "question": "Are the classes private and in person?",
+    "target": "/preguntas-frecuentes/#pregunta-privadas",
+    "spanishQuestion": "¿Las clases son privadas y presenciales?"
+  },
+  {
+    "source": "components/languages-page.tsx",
+    "question": "Can we focus on a specific work or personal goal?",
+    "target": "/preguntas-frecuentes/#pregunta-meta",
+    "spanishQuestion": "¿Podemos trabajar una meta laboral o personal específica?"
+  },
+  {
+    "source": "components/languages-page.tsx",
+    "question": "How do I choose a level or a plan?",
+    "target": "/preguntas-frecuentes/#pregunta-elegir",
+    "spanishQuestion": "¿Cómo elijo un nivel o un plan?"
+  },
+  {
+    "source": "components/pricing-page.tsx",
+    "question": "Are these prices for English or Spanish?",
+    "target": "/preguntas-frecuentes/#pregunta-idioma-precio",
+    "spanishQuestion": "¿Los precios son para inglés o para español?"
+  },
+  {
+    "source": "components/pricing-page.tsx",
+    "question": "Do I have to choose a package right away?",
+    "target": "/preguntas-frecuentes/#pregunta-paquete-inicial",
+    "spanishQuestion": "¿Tengo que elegir un paquete desde el principio?"
+  },
+  {
+    "source": "components/pricing-page.tsx",
+    "question": "How do scheduling and payment work?",
+    "target": "/preguntas-frecuentes/#pregunta-horario-pago",
+    "spanishQuestion": "¿Cómo se acuerdan el horario y el pago?"
+  },
+  {
+    "source": "components/pricing-page.tsx",
+    "question": "How quickly do I need to use a lesson package?",
+    "target": "/preguntas-frecuentes/#pregunta-vigencia",
+    "spanishQuestion": "¿En qué plazo debo utilizar un paquete de clases?"
+  },
+  {
+    "source": "components/pricing-page.tsx",
+    "question": "What if I need to change a lesson?",
+    "target": "/preguntas-frecuentes/#pregunta-cambio",
+    "spanishQuestion": "¿Qué pasa si necesito cambiar una clase?"
+  }
+]

@@ -1,11 +1,14 @@
 import type { MetadataRoute } from 'next';
-import { site, pages } from '@/lib/site';
+import { site, pages, canonicalPageSlugs } from '@/lib/site';
 import { articles } from '@/lib/content';
 export const dynamic = 'force-static';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: site.url, priority: 1 },
-    ...pages.map((p) => ({ url: `${site.url}/${p}/`, priority: p === 'languages' ? 0.9 : 0.7 })),
+    ...pages.map((p) => ({
+      url: `${site.url}/${canonicalPageSlugs[p] ?? p}/`,
+      priority: p === 'languages' ? 0.9 : 0.7,
+    })),
     ...articles.map((a) => ({ url: `${site.url}/blog/${a.slug}/`, priority: 0.6 })),
   ];
 }

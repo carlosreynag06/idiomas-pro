@@ -276,7 +276,7 @@ export default function Home() {
               <br />
               <em>questions.</em>
             </h2>
-            <Link href="/faq/" className="text-link">
+            <Link href="/preguntas-frecuentes/" className="text-link">
               A few more answers <ArrowUpRight size={18} />
             </Link>
           </div>

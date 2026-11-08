@@ -1,0 +1,22 @@
+.privacy-page .es-legal-hero {
+  background: #e3ebe0;
+}
+.privacy-page .es-summary {
+  background: #20251e;
+}
+.privacy-page .es-summary p {
+  color: #e4ef9a;
+}
+.privacy-page .es-legal-hero h1 {
+  font-size: clamp(62px, 6.1vw, 93px);
+}
+@media (max-width: 600px) {
+  .privacy-page .es-legal-hero h1 {
+    font-size: 51px;
+  }
+}
+@media (max-width: 370px) {
+  .privacy-page .es-legal-hero h1 {
+    font-size: 46px;
+  }
+}

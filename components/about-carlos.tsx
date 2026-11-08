@@ -253,7 +253,7 @@ export function AboutCarlos() {
               <br />
               <em>you might wonder.</em>
             </h2>
-            <Link href="/faq/" className="carlos-story-link">
+            <Link href="/preguntas-frecuentes/" className="carlos-story-link">
               All your questions <ArrowUpRight size={17} />
             </Link>
           </div>

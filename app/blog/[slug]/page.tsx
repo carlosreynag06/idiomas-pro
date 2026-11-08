@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import '@/components/journal-page.css';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -37,7 +38,10 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const a = articles.find((a) => a.slug === slug);
   if (!a) notFound();
-  const related = articles.filter((x) => x.slug !== slug).slice(0, 3);
+  const related = [
+    ...articles.filter((x) => x.slug !== slug && x.category === a.category),
+    ...articles.filter((x) => x.slug !== slug && x.category !== a.category),
+  ].slice(0, 3);
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -51,7 +55,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
     mainEntityOfPage: `${site.url}/blog/${a.slug}/`,
   };
   return (
-    <main id="main">
+    <main id="main" className="journal-article-page">
       <article>
         <header className="article-header">
           <div className="container">
@@ -80,7 +84,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
             alt={a.imageAlt}
             width={1500}
             height={800}
-            priority
+            preload
             style={{ objectPosition: a.imagePosition }}
           />
           <span>THE LOCAL WORD · PUERTO PLATA, DOMINICAN REPUBLIC</span>
@@ -108,7 +112,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                 <br />
                 In person, in Puerto Plata.
               </p>
-              <BookButton className="text-link">Talk to Carlos</BookButton>
+              <BookButton className="button button-small">Talk to Carlos</BookButton>
             </div>
           </aside>
           <div className="article-body">
@@ -157,7 +161,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
           </div>
         </div>
       </section>
-      <CTA />
+      <CTA artwork="charcoal" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }}

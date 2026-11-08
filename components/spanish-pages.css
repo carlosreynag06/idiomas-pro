@@ -1,0 +1,363 @@
+body:has(.spanish-page) {
+  background: #fff;
+}
+body:has(.spanish-page) :is(.header, .booking-dialog),
+.spanish-page {
+  --paper: #fff;
+  --ink: #20251e;
+  --muted: #5b6759;
+  --line: #ccd6c6;
+  --blue: #35533e;
+  --blue-dark: #263f2e;
+  --lime: #e4ef9a;
+  color: var(--ink);
+  background: #fff;
+}
+body:has(.spanish-page) .booking-dialog .language-options > button.selected {
+  background: #edf3e7;
+}
+body:has(.spanish-page) .booking-dialog .inquiry-summary {
+  background: #e3ebe0;
+}
+.spanish-page :is(a, button, input, summary):focus-visible {
+  outline-color: #6d8757;
+}
+.es-kicker {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  color: #5b6759;
+  line-height: 1.8;
+}
+.spanish-page h2 {
+  font-size: clamp(42px, 4.2vw, 64px);
+  line-height: 1.06;
+}
+.spanish-page h2 em {
+  color: #35533e;
+}
+.es-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 550;
+  color: #35533e;
+  border-bottom: 1px solid #9bad8c;
+}
+.es-legal-hero {
+  padding: 46px 0 54px;
+  overflow: hidden;
+}
+.es-legal-hero-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+.es-legal-hero h1 {
+  font-size: clamp(64px, 6.4vw, 98px);
+  line-height: 1.02;
+  letter-spacing: -0.065em;
+  margin: 27px 0;
+}
+.es-legal-hero h1 em {
+  color: #35533e;
+}
+.es-legal-hero p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #5b6759;
+  max-width: 520px;
+  margin-bottom: 24px;
+}
+.es-legal-hero-grid > img {
+  width: 100%;
+  height: auto;
+}
+.es-version {
+  display: block;
+  font-size: 10px;
+  line-height: 1.8;
+  color: #5b6759;
+  margin-top: 23px;
+}
+.es-summary {
+  padding: 33px 0;
+  background: #e3ebe0;
+}
+.es-summary > .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+.es-summary p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #35533e;
+  line-height: 1.7;
+}
+.es-document {
+  padding: 85px 0 95px;
+  scroll-margin-top: 0;
+}
+.es-document-grid {
+  display: grid;
+  grid-template-columns: 0.75fr 1.65fr;
+  gap: 100px;
+  max-width: 1210px;
+}
+.es-document aside {
+  position: sticky;
+  top: 30px;
+  align-self: start;
+}
+.es-document aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin: 24px 0 27px;
+}
+.es-document aside nav a {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #5b6759;
+}
+.es-document aside nav a:hover {
+  color: #35533e;
+}
+.es-document aside nav a > span {
+  color: #78906a;
+  font-size: 10px;
+  padding-top: 3px;
+}
+.es-document aside > .es-read-link {
+  font-size: 12px;
+}
+.es-draft-note {
+  background: #edf2e7;
+  border-left: 2px solid #35533e;
+  padding: 20px 23px;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #52624d;
+  margin-bottom: 40px;
+}
+.es-document-body > section {
+  position: relative;
+  border-top: 1px solid #ccd6c6;
+  padding-top: 27px;
+  margin-top: 38px;
+  scroll-margin-top: 35px;
+}
+.es-section-number {
+  display: block;
+  color: #6a805b;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  margin-bottom: 15px;
+}
+.es-document-body > section > h2 {
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  margin-bottom: 21px;
+}
+.es-document-body > section > p {
+  font-size: 17px;
+  line-height: 1.95;
+  color: #52604e;
+  margin-bottom: 17px;
+}
+.es-reference {
+  border-top: 1px solid #ccd6c6;
+  padding-top: 27px;
+  margin-top: 36px;
+}
+.es-reference > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-size: 13px;
+  color: #35533e;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-top: 11px;
+}
+.es-legal-contact {
+  background: #e4ef9a;
+  padding: 68px 0;
+}
+.es-legal-contact > .container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.es-legal-contact h2 {
+  font-size: clamp(42px, 4.2vw, 63px);
+  margin-top: 23px;
+}
+.es-legal-contact p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #485537;
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+.es-legal-contact .es-read-link {
+  display: flex;
+  width: fit-content;
+  margin-top: 18px;
+  font-size: 12px;
+}
+.es-contact-email {
+  display: block;
+  font-size: 11px;
+  color: #485537;
+  margin-top: 16px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 1100px) {
+  .es-document-grid {
+    gap: 60px;
+  }
+  .es-legal-hero-grid {
+    gap: 30px;
+  }
+  .es-legal-hero h1 {
+    font-size: 76px;
+  }
+}
+@media (max-width: 900px) {
+  .es-legal-hero-grid,
+  .es-document-grid,
+  .es-legal-contact > .container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .es-legal-hero-grid > img {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .es-document aside {
+    position: static;
+    border-bottom: 1px solid #ccd6c6;
+    padding-bottom: 28px;
+  }
+  .es-document aside nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+  }
+  .es-document {
+    padding-top: 55px;
+  }
+  .es-summary > .container {
+    gap: 20px;
+  }
+  .es-summary p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .es-kicker {
+    font-size: 9px;
+    letter-spacing: 0.09em;
+  }
+  .es-legal-hero {
+    padding: 35px 0 40px;
+  }
+  .es-legal-hero h1 {
+    font-size: 55px;
+    line-height: 1.05;
+    margin: 23px 0;
+  }
+  .es-legal-hero p {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+  .es-legal-hero-grid {
+    gap: 15px;
+  }
+  .es-legal-hero-grid > img {
+    max-width: 350px;
+  }
+  .es-version {
+    font-size: 9px;
+  }
+  .es-summary {
+    padding: 29px 0;
+  }
+  .es-summary > .container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .es-summary p {
+    font-size: 14px;
+    gap: 13px;
+  }
+  .es-document {
+    padding: 45px 0 60px;
+  }
+  .es-document-grid {
+    gap: 30px;
+  }
+  .es-document aside nav {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .es-document aside nav a {
+    font-size: 13px;
+  }
+  .es-draft-note {
+    font-size: 13px;
+    padding: 18px;
+    margin-bottom: 28px;
+  }
+  .es-document-body > section {
+    margin-top: 30px;
+    padding-top: 23px;
+  }
+  .es-document-body > section > h2 {
+    font-size: 29px;
+    margin-bottom: 18px;
+  }
+  .es-document-body > section > p {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .es-reference > a {
+    font-size: 12px;
+  }
+  .es-legal-contact {
+    padding: 55px 0;
+  }
+  .es-legal-contact > .container {
+    gap: 28px;
+  }
+  .es-legal-contact h2 {
+    font-size: 44px;
+    margin-top: 21px;
+  }
+  .es-legal-contact p {
+    font-size: 15px;
+  }
+  .es-legal-contact .button {
+    font-size: 14px;
+  }
+}
+@media (max-width: 370px) {
+  .es-legal-hero h1 {
+    font-size: 49px;
+  }
+  .es-legal-contact h2 {
+    font-size: 40px;
+  }
+}

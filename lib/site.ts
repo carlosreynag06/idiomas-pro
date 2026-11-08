@@ -16,6 +16,11 @@ export const pages = [
   'privacy',
 ] as const;
 export type PageName = (typeof pages)[number];
+export const canonicalPageSlugs: Partial<Record<PageName, string>> = {
+  faq: 'preguntas-frecuentes',
+  terms: 'terminos',
+  privacy: 'privacidad',
+};
 export const pageMeta: Record<PageName, { title: string; description: string }> = {
   about: {
     title: 'Meet Carlos Reyna',
@@ -43,18 +48,18 @@ export const pageMeta: Record<PageName, { title: string; description: string }> 
       'Practical English and Spanish guides for learning, work, confidence, and everyday conversations in Puerto Plata, Dominican Republic.',
   },
   faq: {
-    title: 'Frequently Asked Questions',
+    title: 'Preguntas frecuentes',
     description:
-      'Everything you need to know about in-person English and Spanish lessons with Carlos Reyna in Puerto Plata.',
+      'Respuestas sobre clases privadas de inglés y español con Carlos Reyna en Puerto Plata: niveles, horarios, precios y reservas.',
   },
   terms: {
-    title: 'Terms of Service',
+    title: 'Términos del servicio',
     description:
-      'Provisional terms for private in-person language lessons offered by Idiomas Pro in Puerto Plata.',
+      'Condiciones para usar Idiomas Pro y acordar clases privadas y presenciales de idiomas en Puerto Plata.',
   },
   privacy: {
-    title: 'Privacy Policy',
+    title: 'Política de privacidad',
     description:
-      'How Idiomas Pro handles your information when you explore our website and inquire about language lessons.',
+      'Cómo se manejan tus datos al consultar sobre clases de inglés y español con Carlos Reyna en Puerto Plata.',
   },
 };

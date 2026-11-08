@@ -318,7 +318,7 @@ export function LanguagesPage() {
               <br />
               That’s what the first conversation is for.
             </p>
-            <Link href="/faq/" className="lp-inline-link">
+            <Link href="/preguntas-frecuentes/" className="lp-inline-link">
               Explore all FAQs <ArrowUpRight size={17} />
             </Link>
           </div>

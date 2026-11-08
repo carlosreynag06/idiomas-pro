@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "check:export": "node scripts/check-export.mjs",
     "check:preview": "node scripts/check-preview.mjs",
+    "check:faq-es": "node scripts/check-spanish-faq.mjs",
     "assets": "node scripts/optimize-assets.mjs"
   },
   "dependencies": {

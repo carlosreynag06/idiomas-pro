@@ -13,6 +13,8 @@ for (const [name, width, quality] of [
   ['languages-english', 1400, 88],
   ['languages-spanish', 1400, 88],
   ['pricing-personal-attention', 1400, 88],
+  ['journal-feature', 1600, 88],
+  ['es-faq-v2', 1100, 92],
   ['journal-private-lessons', 1200, 86],
   ['journal-real-conversation', 1200, 86],
   ['journal-spanish-everyday', 1200, 86],
@@ -45,6 +47,16 @@ await sharp(path.join(images, 'pricing-momentum.png'))
   .resize({ width: 1200, withoutEnlargement: true })
   .webp({ quality: 92, alphaQuality: 100 })
   .toFile(path.join(images, 'pricing-momentum.webp'));
+await sharp(path.join(images, 'journal-quotation.png'))
+  .resize({ width: 1200, withoutEnlargement: true })
+  .webp({ quality: 92, alphaQuality: 100 })
+  .toFile(path.join(images, 'journal-quotation.webp'));
+for (const name of ['es-terms', 'es-privacy']) {
+  await sharp(path.join(images, `${name}.png`))
+    .resize({ width: 1100, withoutEnlargement: true })
+    .webp({ quality: 92, alphaQuality: 100 })
+    .toFile(path.join(images, `${name}.webp`));
+}
 const image = await sharp(path.join(images, 'confident-learner.webp'))
   .resize(500, 630, { fit: 'cover' })
   .toBuffer();
