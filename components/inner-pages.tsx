@@ -1,236 +1,13 @@
 import Link from 'next/link';
 import { AboutCarlos } from './about-carlos';
-import Image from 'next/image';
-import {
-  ArrowUpRight,
-  MapPin,
-  Check,
-  Globe2,
-  Coffee,
-  MessageCircle,
-  BriefcaseBusiness,
-  BookOpen,
-  HeartHandshake,
-} from 'lucide-react';
+import { LanguagesPage } from './languages-page';
+import { PricingPage } from './pricing-page';
+import { ArrowUpRight, MessageCircle } from 'lucide-react';
 import { BookButton } from './site-shell';
-import { CTA, Eyebrow, PageIntro, PriceCards, Steps, StoryCards } from './shared';
-import { ConversationDemo } from './conversation-demo';
+import { CTA, Eyebrow, PageIntro, StoryCards } from './shared';
 import { Journal } from './journal';
 import { FAQBrowser } from './faq-browser';
 import { site, type PageName } from '@/lib/site';
-
-function Languages() {
-  return (
-    <>
-      <PageIntro
-        eyebrow="ENGLISH & SPANISH · PRIVATE · IN PERSON"
-        title="Not just another language."
-        italic="Another way into the world."
-        description="Two languages. One very personal approach. Choose the conversations you want to have, and we’ll work toward them together."
-      />
-      <section className="language-detail-section" id="english">
-        <div className="container language-detail-grid">
-          <div className="language-detail-visual cobalt">
-            <span className="eyebrow">01 / ENGLISH FOR SPANISH SPEAKERS</span>
-            <div className="detail-big-word">
-              Hello<span>↗</span>
-            </div>
-            <p>For the doors you’re ready to open.</p>
-            <span className="detail-small">YOUR EXPERIENCE. A NEW LANGUAGE. MORE POSSIBILITY.</span>
-          </div>
-          <div className="language-detail-copy">
-            <Eyebrow>A LITTLE MORE CONFIDENCE</Eyebrow>
-            <h2>
-              Your next opportunity
-              <br />
-              <em>speaks English.</em>
-            </h2>
-            <p>
-              Let’s make sure you feel ready to answer. Private English lessons built around your
-              starting point, your pace, and the things you want to do.
-            </p>
-            <div className="lesson-focus">
-              <div>
-                <BriefcaseBusiness size={22} />
-                <span>
-                  <strong>English for hospitality</strong>Guest requests, front-desk conversations,
-                  and a warmer welcome.
-                </span>
-              </div>
-              <div>
-                <MessageCircle size={22} />
-                <span>
-                  <strong>Everyday conversation</strong>Real questions, natural answers, and less
-                  second-guessing.
-                </span>
-              </div>
-              <div>
-                <BookOpen size={22} />
-                <span>
-                  <strong>A strong beginning</strong>Patient, practical foundations for complete
-                  beginners.
-                </span>
-              </div>
-            </div>
-            <BookButton language="English">Find my English words</BookButton>
-          </div>
-        </div>
-      </section>
-      <section className="language-detail-section spanish-detail" id="spanish">
-        <div className="container language-detail-grid">
-          <div className="language-detail-visual citron">
-            <span className="eyebrow">02 / SPANISH FOR FOREIGNERS</span>
-            <div className="detail-big-word">
-              Hola<span>✳</span>
-            </div>
-            <p>For a life that feels a little more local.</p>
-            <span className="detail-small">LESS TRANSLATING. MORE CONNECTING.</span>
-          </div>
-          <div className="language-detail-copy">
-            <Eyebrow>MAKE YOURSELF AT HOME</Eyebrow>
-            <h2>
-              There’s more here
-              <br />
-              <em>when you speak Spanish.</em>
-            </h2>
-            <p>
-              Connect with neighbors, ask that follow-up question, and enjoy the little
-              conversations that make Puerto Plata feel like home.
-            </p>
-            <div className="lesson-focus">
-              <div>
-                <Coffee size={22} />
-                <span>
-                  <strong>The everyday essentials</strong>Cafes, shops, directions, and getting
-                  things done.
-                </span>
-              </div>
-              <div>
-                <Globe2 size={22} />
-                <span>
-                  <strong>Local listening</strong>Practice understanding the replies, not just
-                  asking the questions.
-                </span>
-              </div>
-              <div>
-                <HeartHandshake size={22} />
-                <span>
-                  <strong>Confidence at your level</strong>From your first “hola” to a conversation
-                  that keeps going.
-                </span>
-              </div>
-            </div>
-            <BookButton language="Spanish">Find my Spanish words</BookButton>
-          </div>
-        </div>
-      </section>
-      <section className="method-section">
-        <div className="container method-grid">
-          <div className="method-copy">
-            <Eyebrow light>REAL LIFE. REHEARSED.</Eyebrow>
-            <h2>
-              Try it here.
-              <br />
-              <em>Use it out there.</em>
-            </h2>
-            <p>
-              Your lesson is a comfortable place to practice the moments that matter. Ask again.
-              Change the words. Find a way to say it that sounds like you.
-            </p>
-            <Link href="/pricing/" className="text-link light-link">
-              A plan for your pace <ArrowUpRight size={18} />
-            </Link>
-          </div>
-          <ConversationDemo />
-        </div>
-      </section>
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <Eyebrow>HOW WE GET THERE</Eyebrow>
-              <h2>
-                Personal from
-                <br />
-                <em>the very first hello.</em>
-              </h2>
-            </div>
-            <p>
-              Every class is one to one, face to face,
-              <br />
-              and taught personally by Carlos.
-            </p>
-          </div>
-          <Steps />
-        </div>
-      </section>
-      <CTA />
-    </>
-  );
-}
-
-function Pricing() {
-  return (
-    <>
-      <PageIntro
-        eyebrow="GOOD WORDS. A PLAN THAT FITS."
-        title="Your pace."
-        italic="Your next chapter."
-        description="Start with a conversation. Build a little momentum. Choose the space you need to work toward the things you want to say."
-      />
-      <section className="section pricing-page">
-        <div className="container">
-          <div className="pricing-currency">
-            <span>
-              <MapPin size={16} /> Private · In person · Puerto Plata
-            </span>
-            <span>RD$ / DOMINICAN PESOS</span>
-          </div>
-          <PriceCards />
-          <div className="included-strip">
-            <span>EVERY PLAN INCLUDES</span>
-            <span>
-              <Check size={17} /> Carlos as your teacher
-            </span>
-            <span>
-              <Check size={17} /> English or Spanish
-            </span>
-            <span>
-              <Check size={17} /> Your level. Your goals.
-            </span>
-            <span>
-              <Check size={17} /> Real conversation
-            </span>
-          </div>
-        </div>
-      </section>
-      <section className="section pricing-guidance">
-        <div className="container split-heading">
-          <div>
-            <Eyebrow>NOT SURE WHERE TO START?</Eyebrow>
-            <h2>
-              You don’t need a plan.
-              <br />
-              <em>Just a reason to begin.</em>
-            </h2>
-          </div>
-          <div>
-            <p>
-              Tell Carlos what you’re hoping to do and when you’re usually free. Together, you can
-              find a sensible starting point and a schedule you’ll feel good about keeping.
-            </p>
-            <p>
-              There is no payment or automatic booking on this website. All arrangements are
-              confirmed personally before you commit.
-            </p>
-            <BookButton>Let’s figure it out together</BookButton>
-          </div>
-        </div>
-      </section>
-      <CTA />
-    </>
-  );
-}
 
 function Testimonials() {
   return (
@@ -475,13 +252,24 @@ function Legal({ privacy = false }: { privacy?: boolean }) {
 
 export function InnerPage({ page }: { page: PageName }) {
   return (
-    <main id="main" className={page === 'about' ? 'about-page' : undefined}>
+    <main
+      id="main"
+      className={
+        page === 'about'
+          ? 'about-page'
+          : page === 'languages'
+            ? 'languages-page'
+            : page === 'pricing'
+              ? 'lesson-pricing-page'
+              : undefined
+      }
+    >
       {page === 'about' ? (
         <AboutCarlos />
       ) : page === 'languages' ? (
-        <Languages />
+        <LanguagesPage />
       ) : page === 'pricing' ? (
-        <Pricing />
+        <PricingPage />
       ) : page === 'testimonials' ? (
         <Testimonials />
       ) : page === 'blog' ? (

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { lessonPlans } from '@/lib/lesson-plans';
 import Image from 'next/image';
 import { ArrowUpRight, Plus, Check, ArrowRight } from 'lucide-react';
 import { BookButton } from './site-shell';
@@ -145,52 +146,7 @@ export function StoryCards({ full = false }: { full?: boolean }) {
   );
 }
 export function PriceCards({ compact = false }: { compact?: boolean }) {
-  const plans = [
-    {
-      name: 'A fresh start',
-      tag: 'FIND YOUR FOOTING',
-      price: '1,200',
-      frequency: 'per lesson',
-      desc: 'A little room to explore. A great place to begin.',
-      items: [
-        'One private 60-minute lesson',
-        'English or Spanish, at your level',
-        'A practical plan for what comes next',
-      ],
-      cta: 'Start with one lesson',
-      featured: false,
-    },
-    {
-      name: 'A little momentum',
-      tag: 'MAKE IT A HABIT',
-      price: '4,400',
-      frequency: '4 lessons',
-      desc: 'Your weekly conversation. Your steady progress.',
-      items: [
-        'Four private 60-minute lessons',
-        'A plan built around your goals',
-        'Useful practice between meetings',
-        'Flexible scheduling by arrangement',
-      ],
-      cta: 'Find my momentum',
-      featured: true,
-    },
-    {
-      name: 'Going places',
-      tag: 'GIVE YOUR GOAL SOME SPACE',
-      price: '8,000',
-      frequency: '8 lessons',
-      desc: 'More practice for the conversations that matter.',
-      items: [
-        'Eight private 60-minute lessons',
-        'Focused work or everyday conversation',
-        'Progress check-ins with Carlos',
-        'Personal exercises to keep you going',
-      ],
-      cta: 'Let’s go further',
-      featured: false,
-    },
-  ];
+  const plans = lessonPlans;
   return (
     <>
       <div className={`pricing-grid ${compact ? 'compact' : ''}`}>

@@ -25,19 +25,21 @@ import {
 import { site } from '@/lib/site';
 
 type Language = 'English' | 'Spanish';
-const BookingContext = createContext<(language?: Language) => void>(() => {});
+const BookingContext = createContext<(language?: Language, plan?: string) => void>(() => {});
 export function BookButton({
   children = 'Find your first words',
   className = 'button',
   language,
+  plan,
 }: {
   children?: ReactNode;
   className?: string;
   language?: Language;
+  plan?: string;
 }) {
   const open = useContext(BookingContext);
   return (
-    <button className={className} onClick={() => open(language)}>
+    <button className={className} onClick={() => open(language, plan)}>
       {children}
       <ArrowUpRight size={19} strokeWidth={1.7} />
     </button>
@@ -186,9 +188,11 @@ function Footer() {
 function BookingDialog({
   dialogRef,
   initialLanguage,
+  initialPlan,
 }: {
   dialogRef: React.RefObject<HTMLDialogElement | null>;
   initialLanguage: Language;
+  initialPlan: string;
 }) {
   const [language, setLanguage] = useState<Language>(initialLanguage);
   const [step, setStep] = useState(1);
@@ -202,7 +206,7 @@ function BookingDialog({
     setStep(1);
     setCopied(false);
   }, [initialLanguage]);
-  const body = `Hi Carlos,\n\nMy name is ${name}. I am interested in private, in-person ${language} lessons in Puerto Plata.\n\nMy goal: ${goal}\nMy preferred schedule: ${schedule || 'Flexible / to discuss'}\nMy email: ${email}\n\nPlease let me know about availability, pricing, and meeting arrangements.\n\nThank you!`;
+  const body = `Hi Carlos,\n\nMy name is ${name}. I am interested in private, in-person ${language} lessons in Puerto Plata.\n${initialPlan ? `\nInterested in: ${initialPlan}\n` : ''}\nMy goal: ${goal}\nMy preferred schedule: ${schedule || 'Flexible / to discuss'}\nMy email: ${email}\n\nPlease let me know about availability, pricing, and meeting arrangements.\n\nThank you!`;
   const mailto = `mailto:${site.email}?subject=${encodeURIComponent(`${language} lessons inquiry — ${name}`)}&body=${encodeURIComponent(body)}`;
   function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -239,6 +243,11 @@ function BookingDialog({
               your <em>words.</em>
             </h2>
             <p>What would you like to feel more confident speaking?</p>
+            {initialPlan ? (
+              <p className="selected-plan-note">
+                Your starting point: <strong>{initialPlan}</strong>
+              </p>
+            ) : null}
             <div className="language-options">
               {(['English', 'Spanish'] as const).map((l) => (
                 <button
@@ -346,6 +355,11 @@ function BookingDialog({
               to Carlos.
             </p>
             <div className="inquiry-summary">
+              {initialPlan ? (
+                <p>
+                  <strong>Plan to discuss:</strong> {initialPlan}
+                </p>
+              ) : null}
               <span>{language} · In person · Puerto Plata</span>
               <p>{goal}</p>
               {schedule && <small>{schedule}</small>}
@@ -381,10 +395,12 @@ function BookingDialog({
 export function SiteShell({ children }: { children: ReactNode }) {
   const dialog = useRef<HTMLDialogElement>(null);
   const [language, setLanguage] = useState<Language>('English');
+  const [plan, setPlan] = useState('');
   const [dialogKey, setDialogKey] = useState(0);
   const path = usePathname();
-  function open(l: Language = 'English') {
+  function open(l: Language = 'English', selectedPlan?: string) {
     setLanguage(l);
+    setPlan(selectedPlan ?? '');
     setDialogKey((k) => k + 1);
   }
   useEffect(() => {
@@ -450,7 +466,12 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <Header />
       {children}
       <Footer />
-      <BookingDialog key={dialogKey} dialogRef={dialog} initialLanguage={language} />
+      <BookingDialog
+        key={dialogKey}
+        dialogRef={dialog}
+        initialLanguage={language}
+        initialPlan={plan}
+      />
     </BookingContext.Provider>
   );
 }

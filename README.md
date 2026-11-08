@@ -28,8 +28,8 @@ The static production server uses port 3000, or the `PORT` environment variable.
 
 - `/` — full homepage
 - `/about/` — a bespoke editorial page with Carlos’s story, experience, teaching approach, original lesson photography, a custom Blender book sculpture, and practical questions
-- `/languages/` — English and Spanish lessons
-- `/pricing/` — three editable sample plans
+- `/languages/` — distinct English and Spanish paths, original learner photography and 3D alphabet artwork, six interactive lesson examples, goals, FAQs, and language-specific inquiries
+- `/pricing/` — three editable plans, clear per-lesson pricing and savings, new original artwork, FAQs, and package-aware inquiries
 - `/testimonials/` — clearly labeled sample student stories
 - `/blog/` — searchable journal with category filters
 - `/blog/[slug]/` — six complete articles targeting language-learning searches in Puerto Plata
@@ -58,6 +58,8 @@ There is no `src/` directory.
 ## Inquiry flow
 
 Every lesson CTA opens a three-step inquiry: language → goals and contact information → review. Required fields use native browser validation. The final button prepares a message in the visitor’s email app; the visitor reviews and sends it. There is also a copy fallback.
+
+Pricing-page inquiries preserve the chosen lesson package in the dialog, review, and prepared email. General inquiry buttons clear the previous package. The shared plan data is editable in `lib/lesson-plans.ts`.
 
 The website does not automatically send mail, store form submissions, charge visitors, or confirm bookings. No email service credentials are required. The recipient is editable in `lib/site.ts` and currently uses Carlos’s configured Git email address.
 
@@ -89,6 +91,10 @@ GSAP provides the homepage entrance sequence, viewport reveals, and an automatic
 Each article has its own original cover; journal cards do not reuse the hero photograph. The six newer prompts and source paths are documented in `docs/JOURNAL-ASSETS.md`.
 
 The About Carlos page has two exclusive ImageGen photographs and a new open-book sculpture created in Blender. Original files, exact image prompts, and the reproducible Blender command are documented in `docs/ABOUT-ASSETS.md`. Its colors are scoped to the page, header, and inquiry dialog; the shared footer keeps its existing design.
+
+The Languages page has two further exclusive ImageGen photographs and an original ceramic alphabet sculpture rendered in Blender. `docs/LANGUAGES-ASSETS.md` contains prompts and source paths. Its interactive lesson preview offers English or Spanish examples for everyday life, work, and complete beginners. Choosing a lesson language also selects that language in the inquiry dialog.
+
+The Pricing page adds exclusive lesson photography and a custom Blender sculpture with one, four, and eight notebooks. `docs/PRICING-ASSETS.md` records source files, the final prompt, render details, and the price calculations.
 
 ## Deployment
 
