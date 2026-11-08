@@ -24,8 +24,8 @@ The footer’s established charcoal and citron define the palette. Deep green re
 | Learning method             | Sage section; white conversation panel with sage and citron messages           |
 | Trust divider               | Charcoal with citron icons; retains its position and pricing-band height match |
 | About Carlos                | White to foreground the photograph and personal story                          |
-| First steps                 | Sage to separate the process from the personal story                           |
-| Student stories             | White section with subtle green cards                                          |
+| First steps                 | Charcoal with ivory text, citron accents, and a citron action                  |
+| Student stories             | White editorial section with an exclusive photograph and a story switcher      |
 | Pricing band                | Citron to highlight the lesson-plan action                                     |
 | Journal                     | White to foreground the three distinct photographs                             |
 | FAQ                         | Sage to distinguish the practical information                                  |
@@ -38,4 +38,4 @@ The original cobalt Blender scene is retained. The homepage uses `assets/blender
 
 ## Verification
 
-The production build, exported routes, internal links, and live homepage image requests pass. The footer’s rendered markup hash is unchanged. The primary button’s white text on deep green has an 8.54:1 contrast ratio; supporting text on sage has a 4.88:1 ratio. The full desktop sequence and inquiry dialog were visually reviewed in Chrome.
+The production build, exported routes, internal links, and live homepage image requests pass. The footer keeps its charcoal and citron styling, with global Spanish copy and navigation. The primary button’s white text on deep green has an 8.54:1 contrast ratio; supporting text on sage has a 4.88:1 ratio. The full desktop sequence and inquiry dialog were visually reviewed in Chrome.

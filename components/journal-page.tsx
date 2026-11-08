@@ -115,7 +115,7 @@ export function JournalPage() {
             </p>
             <div className="jw-editor-signoff">
               <span>Carlos Reyna</span>
-              <Link href="/about/">
+              <Link href="/sobre-carlos/">
                 Meet your teacher <ArrowUpRight size={17} />
               </Link>
             </div>

@@ -129,13 +129,42 @@ body:has(.homepage) .booking-dialog .inquiry-summary {
   background: var(--home-action-hover);
 }
 
-/* Sage creates a repeated rhythm for method, next steps, and practical answers. */
-.homepage :is(.method-section, .steps-section, .home-faq) {
+/* Sage carries method and practical answers; the next-steps band is charcoal. */
+.homepage :is(.method-section, .home-faq) {
   background: var(--home-sage);
   color: var(--ink);
 }
 .homepage :is(.steps-section, .home-faq) {
   padding-block: clamp(68px, 7.4vw, 106px);
+}
+.homepage .steps-section {
+  --ink: #fff;
+  --muted: #c4cdbb;
+  background: var(--home-charcoal);
+  color: #fff;
+}
+.homepage .steps-section :is(h2 em, .little-star, .step-top) {
+  color: var(--home-citron);
+}
+.homepage .steps-section .eyebrow {
+  color: #c4cdbb;
+}
+.homepage .steps-section .step {
+  border-color: #ffffff35;
+}
+.homepage .steps-section .text-link {
+  background: var(--home-citron);
+  color: #20251e;
+  border: 0;
+  border-radius: 30px;
+  min-height: 53px;
+  padding: 15px 23px;
+}
+.homepage .steps-section .text-link:hover {
+  background: #f0f8bb;
+}
+.homepage .steps-section :is(a, button):focus-visible {
+  outline-color: #e4ef9a;
 }
 .homepage .method-section .eyebrow.light,
 .homepage .method-copy > p {

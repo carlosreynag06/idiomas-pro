@@ -133,7 +133,7 @@ export default async function BlogArticle({ params }: { params: Promise<{ slug: 
                   a career in hospitality, and hundreds of students have shaped my belief that good
                   conversations change things.
                 </p>
-                <Link href="/about/" className="text-link">
+                <Link href="/sobre-carlos/" className="text-link">
                   More of my story <ArrowUpRight size={16} />
                 </Link>
               </div>

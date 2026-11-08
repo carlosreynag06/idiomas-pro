@@ -16,11 +16,21 @@ export const pages = [
   'privacy',
 ] as const;
 export type PageName = (typeof pages)[number];
-export const canonicalPageSlugs: Partial<Record<PageName, string>> = {
+export const canonicalPageSlugs: Record<PageName, string> = {
+  about: 'sobre-carlos',
+  languages: 'idiomas',
+  pricing: 'precios',
+  testimonials: 'testimonios',
+  blog: 'blog',
   faq: 'preguntas-frecuentes',
   terms: 'terminos',
   privacy: 'privacidad',
 };
+// The three legal/FAQ pages have their own route folders.
+export const contentPages = ['about', 'languages', 'pricing', 'testimonials', 'blog'] as const;
+export function pageFromSlug(slug: string) {
+  return contentPages.find((page) => canonicalPageSlugs[page] === slug);
+}
 export const pageMeta: Record<PageName, { title: string; description: string }> = {
   about: {
     title: 'Meet Carlos Reyna',
@@ -38,9 +48,9 @@ export const pageMeta: Record<PageName, { title: string; description: string }> 
       'Explore flexible private English and Spanish lesson plans in Puerto Plata. Personal attention, practical conversation, and lessons built around you.',
   },
   testimonials: {
-    title: 'Student Stories',
+    title: 'Testimonios · La confianza tiene voz',
     description:
-      'Discover the kinds of language goals we work toward in private English and Spanish classes in Puerto Plata.',
+      'Historias de aprendizaje de inglés y español con Carlos Reyna. Clases privadas y presenciales para encontrar tu voz en Puerto Plata.',
   },
   blog: {
     title: 'The Local Word — Puerto Plata Language Journal',

@@ -2,9 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowDown, ArrowUpRight, MapPin } from 'lucide-react';
 import { BookButton } from '@/components/site-shell';
-import { CTA, Eyebrow, FAQList, JournalPreview, Steps, StoryCards } from '@/components/shared';
+import { CTA, Eyebrow, FAQList, JournalPreview, Steps } from '@/components/shared';
 import { ConversationDemo } from '@/components/conversation-demo';
 import { TrustBand } from '@/components/trust-band';
+import { HomeTestimonials } from '@/components/home-testimonials';
 
 export default function Home() {
   return (
@@ -134,7 +135,7 @@ export default function Home() {
             <span>
               <MapPin size={15} /> Every lesson is private and in person in Puerto Plata.
             </span>
-            <Link href="/languages/">
+            <Link href="/idiomas/">
               Find your language <ArrowUpRight size={17} />
             </Link>
           </div>
@@ -157,7 +158,7 @@ export default function Home() {
               <br />
               <strong>It’s to sound like you. In another language.</strong>
             </p>
-            <Link href="/languages/" className="text-link light-link">
+            <Link href="/idiomas/" className="text-link light-link">
               This is how we learn <ArrowUpRight size={19} />
             </Link>
           </div>
@@ -209,7 +210,7 @@ export default function Home() {
             <p className="carlos-signature">
               Carlos Reyna <span>YOUR PERSON ACROSS THE TABLE</span>
             </p>
-            <Link href="/about/" className="text-link">
+            <Link href="/sobre-carlos/" className="text-link">
               A little more of my story <ArrowUpRight size={19} />
             </Link>
           </div>
@@ -231,27 +232,7 @@ export default function Home() {
           <Steps />
         </div>
       </section>
-      <section className="section stories-section">
-        <div className="container">
-          <div className="section-heading" data-reveal>
-            <div>
-              <Eyebrow>WHAT CONFIDENCE CAN SOUND LIKE</Eyebrow>
-              <h2>
-                More than words.
-                <br />
-                <em>Little turning points.</em>
-              </h2>
-            </div>
-            <Link href="/testimonials/" className="text-link">
-              Meet the possibilities <ArrowUpRight size={19} />
-            </Link>
-          </div>
-          <StoryCards />
-          <p className="sample-note">
-            Illustrative student stories. Sample names and quotes are included for design review.
-          </p>
-        </div>
-      </section>
+      <HomeTestimonials />
       <section className="pricing-banner">
         <div className="container pricing-banner-inner" data-reveal>
           <div>
@@ -261,7 +242,7 @@ export default function Home() {
             </h2>
             <p>One lesson to get going, or a little momentum every week.</p>
           </div>
-          <Link href="/pricing/" className="button">
+          <Link href="/precios/" className="button">
             Explore lesson plans <ArrowUpRight size={19} />
           </Link>
         </div>

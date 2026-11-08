@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowDown, ArrowUpRight, Check, MapPin, Plus } from 'lucide-react';
 import { BookButton } from './site-shell';
 import { Eyebrow } from './shared';
+import { BackstoryTimeline } from './backstory-timeline';
 import './about-carlos.css';
 
 const chapters = [
@@ -143,16 +144,26 @@ export function AboutCarlos() {
               The way I teach comes from the places I’ve lived, the work I’ve done, and the people
               I’ve learned alongside.
             </p>
-            <span className="carlos-margin-note">
-              Life first.
-              <br />
-              Language all the way through. <ArrowUpRight size={24} />
-            </span>
+            <figure className="carlos-backstory-art">
+              <Image
+                src="/images/about-backstory-notes.webp"
+                width={1448}
+                height={1086}
+                alt="Illustrative linen notebooks and handwritten lesson notes, reflecting a life of learning and teaching"
+                sizes="(max-width: 760px) 90vw, 43vw"
+              />
+              <figcaption>
+                <span>NOTES FROM A LIFE BETWEEN LANGUAGES.</span>
+                <span>Illustrative study materials</span>
+              </figcaption>
+            </figure>
           </div>
-          <div className="carlos-chapters">
+          <BackstoryTimeline>
             {chapters.map((chapter) => (
-              <article key={chapter.number} className="carlos-chapter" data-reveal>
-                <span className="carlos-chapter-number">{chapter.number}</span>
+              <article key={chapter.number} className="carlos-chapter">
+                <span className="carlos-chapter-number" data-chapter-node>
+                  {chapter.number}
+                </span>
                 <div>
                   <span className="carlos-chapter-tag">{chapter.tag}</span>
                   <h3>{chapter.title}</h3>
@@ -160,7 +171,7 @@ export function AboutCarlos() {
                 </div>
               </article>
             ))}
-          </div>
+          </BackstoryTimeline>
         </div>
       </section>
 
@@ -204,7 +215,7 @@ export function AboutCarlos() {
                 </div>
               ))}
             </div>
-            <Link href="/languages/" className="button">
+            <Link href="/idiomas/" className="button">
               Explore the lessons <ArrowUpRight size={19} />
             </Link>
           </div>
@@ -297,7 +308,7 @@ export function AboutCarlos() {
           </p>
           <div className="carlos-next-actions">
             <BookButton>Say hello to Carlos</BookButton>
-            <Link href="/pricing/" className="carlos-story-link">
+            <Link href="/precios/" className="carlos-story-link">
               Take a look at pricing <ArrowUpRight size={17} />
             </Link>
           </div>

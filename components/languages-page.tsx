@@ -156,7 +156,7 @@ export function LanguagesPage() {
             <FocusList items={englishFocus} />
             <div className="lp-course-actions">
               <BookButton language="English">Let’s work on my English</BookButton>
-              <Link href="/pricing/" className="lp-inline-link">
+              <Link href="/precios/" className="lp-inline-link">
                 View pricing <ArrowUpRight size={16} />
               </Link>
             </div>
@@ -216,7 +216,7 @@ export function LanguagesPage() {
             <FocusList items={spanishFocus} />
             <div className="lp-course-actions">
               <BookButton language="Spanish">Let’s work on my Spanish</BookButton>
-              <Link href="/pricing/" className="lp-inline-link">
+              <Link href="/precios/" className="lp-inline-link">
                 View pricing <ArrowUpRight size={16} />
               </Link>
             </div>
@@ -272,7 +272,7 @@ export function LanguagesPage() {
                 <em>With your name on it.</em>
               </h2>
             </div>
-            <Link href="/about/" className="lp-inline-link">
+            <Link href="/sobre-carlos/" className="lp-inline-link">
               Get to know Carlos <ArrowUpRight size={18} />
             </Link>
           </div>

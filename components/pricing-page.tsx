@@ -180,7 +180,7 @@ export function PricingPage() {
                 </li>
               ))}
             </ul>
-            <Link href="/languages/" className="pp-inline-link">
+            <Link href="/idiomas/" className="pp-inline-link">
               See what we can work on <ArrowUpRight size={17} />
             </Link>
           </div>

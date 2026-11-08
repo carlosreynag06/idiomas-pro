@@ -47,12 +47,11 @@ export function BookButton({
   );
 }
 export function Brand({ footer = false }: { footer?: boolean }) {
-  const spanish = isSpanishPage(usePathname());
   return (
     <Link
       href="/"
       className={`brand ${footer ? 'brand-footer' : ''}`}
-      aria-label={spanish ? 'Inicio de Idiomas Pro' : 'Idiomas Pro home'}
+      aria-label="Inicio de Idiomas Pro"
     >
       <span className="brand-symbol" aria-hidden="true">
         <span />
@@ -69,13 +68,13 @@ export function Brand({ footer = false }: { footer?: boolean }) {
 }
 function Header() {
   const path = usePathname();
-  const spanish = isSpanishPage(path);
   const [menu, setMenu] = useState(false);
   const nav = [
-    [spanish ? 'Sobre Carlos' : 'About Carlos', '/about/'],
-    [spanish ? 'Idiomas' : 'Languages', '/languages/'],
-    [spanish ? 'Precios' : 'Pricing', '/pricing/'],
-    [spanish ? 'El diario' : 'The journal', '/blog/'],
+    ['Sobre Carlos', '/sobre-carlos/'],
+    ['Idiomas', '/idiomas/'],
+    ['Precios', '/precios/'],
+    ['Testimonios', '/testimonios/'],
+    ['Blog', '/blog/'],
   ];
   useEffect(() => {
     setMenu(false);
@@ -89,13 +88,10 @@ function Header() {
     return () => window.removeEventListener('keydown', close);
   }, [menu]);
   return (
-    <header className="header" lang={spanish ? 'es' : undefined}>
+    <header className="header" lang="es">
       <div className="container header-inner">
         <Brand />
-        <nav
-          className="desktop-nav"
-          aria-label={spanish ? 'Navegación principal' : 'Main navigation'}
-        >
+        <nav className="desktop-nav" aria-label="Navegación principal">
           {nav.map(([label, href]) => (
             <Link href={href} key={href} className={path === href ? 'active' : ''}>
               {label}
@@ -103,20 +99,10 @@ function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <BookButton className="button button-small">
-            {spanish ? 'Hablemos' : 'Let’s talk'}
-          </BookButton>
+          <BookButton className="button button-small">Hablemos</BookButton>
           <button
             className="menu-toggle"
-            aria-label={
-              spanish
-                ? menu
-                  ? 'Cerrar menú'
-                  : 'Abrir menú'
-                : menu
-                  ? 'Close navigation'
-                  : 'Open navigation'
-            }
+            aria-label={menu ? 'Cerrar menú' : 'Abrir menú'}
             aria-expanded={menu}
             aria-controls="mobile-navigation"
             onClick={() => setMenu(!menu)}
@@ -126,11 +112,7 @@ function Header() {
         </div>
       </div>
       {menu && (
-        <nav
-          className="mobile-nav"
-          id="mobile-navigation"
-          aria-label={spanish ? 'Navegación móvil' : 'Mobile navigation'}
-        >
+        <nav className="mobile-nav" id="mobile-navigation" aria-label="Navegación móvil">
           {nav.map(([label, href], i) => (
             <Link key={href} href={href}>
               <small>0{i + 1}</small>
@@ -139,80 +121,70 @@ function Header() {
             </Link>
           ))}
           <Link href="/preguntas-frecuentes/">
-            <small>05</small>
-            {spanish ? '¿Tienes preguntas?' : 'Questions?'}
+            <small>{String(nav.length + 1).padStart(2, '0')}</small>
+            Preguntas frecuentes
             <ArrowUpRight />
           </Link>
-          <BookButton>{spanish ? 'Hablemos' : 'Let’s talk'}</BookButton>
+          <BookButton>Hablemos</BookButton>
         </nav>
       )}
     </header>
   );
 }
 function Footer() {
-  const spanish = isSpanishPage(usePathname());
   return (
-    <footer className="footer" lang={spanish ? 'es' : undefined}>
+    <footer className="footer" lang="es">
       <div className="container">
         <div className="footer-top">
           <div>
             <Brand footer />
             <p>
-              {spanish ? 'Dos idiomas.' : 'Two languages.'}
+              Dos idiomas.
               <br />
-              {spanish ? 'Un mundo de conexiones reales.' : 'A world of real connections.'}
+              Un mundo de conexiones reales.
             </p>
             <a className="footer-email" href={`mailto:${site.email}`}>
-              {spanish ? 'Di hola' : 'Say hello'} <ArrowUpRight size={17} />
+              Di hola <ArrowUpRight size={17} />
             </a>
           </div>
           <div className="footer-links">
-            <span className="eyebrow">{spanish ? 'EXPLORA UN POCO' : 'TAKE A LOOK AROUND'}</span>
-            <Link href="/about/">{spanish ? 'Sobre Carlos' : 'About Carlos'}</Link>
-            <Link href="/languages/">{spanish ? 'Inglés y español' : 'English & Spanish'}</Link>
-            <Link href="/pricing/">{spanish ? 'Planes de clases' : 'Lesson plans'}</Link>
-            <Link href="/testimonials/">
-              {spanish ? 'Historias de estudiantes' : 'Student stories'}
-            </Link>
+            <span className="eyebrow">EXPLORA UN POCO</span>
+            <Link href="/sobre-carlos/">Sobre Carlos</Link>
+            <Link href="/idiomas/">Idiomas</Link>
+            <Link href="/precios/">Precios</Link>
+            <Link href="/testimonios/">Testimonios</Link>
           </div>
           <div className="footer-links">
-            <span className="eyebrow">{spanish ? 'UN POCO MÁS' : 'A LITTLE MORE'}</span>
-            <Link href="/blog/">{spanish ? 'El diario' : 'The journal'}</Link>
-            <Link href="/preguntas-frecuentes/">
-              {spanish ? 'Preguntas frecuentes' : 'Your questions'}
-            </Link>
-            <Link href="/terminos/">{spanish ? 'Términos del servicio' : 'Terms of service'}</Link>
-            <Link href="/privacidad/">{spanish ? 'Política de privacidad' : 'Privacy policy'}</Link>
+            <span className="eyebrow">UN POCO MÁS</span>
+            <Link href="/blog/">Blog</Link>
+            <Link href="/preguntas-frecuentes/">Preguntas frecuentes</Link>
+            <Link href="/terminos/">Términos del servicio</Link>
+            <Link href="/privacidad/">Política de privacidad</Link>
           </div>
           <div className="footer-local">
             <span className="location-icon">
               <MapPin size={25} />
             </span>
             <p>
-              {spanish ? 'Hecho para la vida' : 'Made for life'}
+              Hecho para la vida
               <br />
-              <strong>{spanish ? 'en Puerto Plata.' : 'in Puerto Plata.'}</strong>
+              <strong>en Puerto Plata.</strong>
             </p>
             <span>
-              {spanish ? 'República Dominicana' : 'Dominican Republic'}
+              República Dominicana
               <br />
               19.7934° N, 70.6884° W
             </span>
           </div>
         </div>
         <div className="footer-wordmark" aria-hidden="true">
-          {spanish ? 'hablemos' : 'let’s talk'}
+          Hablemos
           <span>→</span>
         </div>
         <div className="footer-bottom">
-          <span>
-            © {new Date().getFullYear()} Idiomas Pro.{' '}
-            {spanish ? 'Todos los derechos reservados.' : 'All good words reserved.'}
-          </span>
-          <span>
-            {spanish ? 'Inglés. Español. En la vida real.' : 'English. Español. In real life.'}
-          </span>
-          <a href="#top">{spanish ? 'Volver arriba ↑' : 'Back to the top ↑'}</a>
+          <span>© {new Date().getFullYear()} Idiomas Pro. Todos los derechos reservados.</span>
+          <span>Inglés. Español. En la vida real.</span>
+          <a href="#top">Volver arriba ↑</a>
         </div>
       </div>
     </footer>
@@ -574,8 +546,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
   }, [path]);
   return (
     <BookingContext.Provider value={open}>
-      <a href="#main" className="skip-link" lang={isSpanishPage(path) ? 'es' : undefined}>
-        {isSpanishPage(path) ? 'Saltar al contenido' : 'Skip to content'}
+      <a href="#main" className="skip-link" lang="es">
+        Saltar al contenido
       </a>
       <div id="top" />
       <Header />

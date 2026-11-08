@@ -8,9 +8,9 @@ Three independent route folders contain their own pages and CSS:
 - `app/terminos/`: terms page and styles.
 - `app/privacidad/`: privacy page and styles.
 
-`components/spanish-pages.css` shares visual rules only. There is no shared content-page folder. Navigation, mobile menu, footer copy, accessible labels, and the entire inquiry dialog are Spanish on these routes. Footer structure and styling are preserved. The rest of the website remains in its existing language for a later translation pass.
+`components/spanish-pages.css` shares visual rules only. There is no shared content-page folder. The global header, mobile menu, footer, and their accessible labels are Spanish on every route. The entire inquiry dialog is Spanish on these three routes. Footer structure and styling are preserved. The remaining page-body and dialog copy stays in its existing language for a later translation pass.
 
-Old `/faq/`, `/terms/`, and `/privacy/` URLs render the corresponding new page and declare the Spanish URL as canonical. Internal links and sitemap entries use the new URLs.
+Internal links, actual routes, canonical URLs, and sitemap entries use Spanish URLs: `/sobre-carlos/`, `/idiomas/`, `/precios/`, `/testimonios/`, `/preguntas-frecuentes/`, `/terminos/`, and `/privacidad/`. `/blog/` remains unchanged. English aliases and redirects are not generated.
 
 ## Complete FAQ coverage
 

@@ -204,8 +204,8 @@ body:has(.about-page) .booking-dialog .inquiry-summary {
 }
 .carlos-story-layout {
   display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
-  gap: 100px;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
   align-items: start;
 }
 .carlos-story-heading h2 {
@@ -242,24 +242,104 @@ body:has(.about-page) .booking-dialog .inquiry-summary {
   padding: 0 0 37px;
   position: relative;
 }
-.carlos-chapter:not(:last-child)::before {
-  content: '';
+.carlos-backstory-art {
+  margin-top: 32px;
+}
+.carlos-backstory-art img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.carlos-backstory-art figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  font-size: 7px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  color: #5b6759;
+  padding-top: 13px;
+}
+.carlos-backstory-art figcaption span:last-child {
+  font-size: 8px;
+  letter-spacing: 0;
+}
+.carlos-chapters {
+  position: relative;
+  min-width: 0;
+  --chapter-progress: 0;
+}
+.carlos-timeline-track {
   position: absolute;
   left: 17px;
-  top: 40px;
-  bottom: 0;
-  border-left: 1px solid #b5c3ae;
+  top: var(--track-top, 17px);
+  height: var(--track-height, calc(100% - 60px));
+  width: 2px;
+  background: #b5c3ae;
 }
-.carlos-chapter:not(:first-child) {
+.carlos-timeline-fill {
+  position: absolute;
+  inset: 0;
+  background: #35533e;
+  transform-origin: top;
+  transform: scaleY(var(--chapter-progress));
+}
+.carlos-timeline-tip {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: -3px;
+  top: calc(var(--chapter-progress) * 100%);
+  transform: translateY(-50%);
+  background: #35533e;
+  box-shadow: 0 0 0 4px #35533e18;
+}
+.carlos-chapter[data-reached='true'] .carlos-chapter-number {
+  background: #35533e;
+  border-color: #35533e;
+  color: #fff;
+}
+@media (max-width: 760px) {
+  .carlos-timeline-track {
+    left: 14px;
+  }
+  .carlos-backstory-art {
+    margin-top: 28px;
+  }
+  .carlos-backstory-art figcaption {
+    gap: 10px;
+    font-size: 6px;
+  }
+  .carlos-backstory-art figcaption span:last-child {
+    font-size: 7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carlos-chapter-number {
+    transition: none;
+  }
+  .carlos-timeline-tip {
+    display: none;
+  }
+}
+.carlos-chapter + .carlos-chapter {
   padding-top: 25px;
-}
-.carlos-chapter:not(:first-child)::before {
-  top: 65px;
 }
 .carlos-chapter:last-child {
   padding-bottom: 0;
 }
 .carlos-chapter-number {
+  position: relative;
+  z-index: 2;
+  background: #e3ebe0;
+  box-shadow: 0 0 0 5px #e3ebe0;
+  transition:
+    color 0.25s,
+    background 0.25s,
+    border-color 0.25s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -804,13 +884,6 @@ body:has(.about-page) .booking-dialog .inquiry-summary {
     width: 29px;
     height: 29px;
     font-size: 10px;
-  }
-  .carlos-chapter:not(:last-child)::before {
-    left: 14px;
-    top: 35px;
-  }
-  .carlos-chapter:not(:first-child)::before {
-    top: 60px;
   }
   .carlos-chapter-tag {
     font-size: 9px;

@@ -27,18 +27,17 @@ The static production server uses port 3000, or the `PORT` environment variable.
 ## Pages
 
 - `/` — full homepage
-- `/about/` — a bespoke editorial page with Carlos’s story, experience, teaching approach, original lesson photography, a custom Blender book sculpture, and practical questions
-- `/languages/` — distinct English and Spanish paths, original learner photography and 3D alphabet artwork, six interactive lesson examples, goals, FAQs, and language-specific inquiries
-- `/pricing/` — three editable plans, clear per-lesson pricing and savings, new original artwork, FAQs, and package-aware inquiries
-- `/testimonials/` — clearly labeled sample student stories
+- `/sobre-carlos/` — a bespoke editorial page with Carlos’s story, experience, teaching approach, original lesson photography, a custom Blender book sculpture, and practical questions
+- `/idiomas/` — distinct English and Spanish paths, original learner photography and 3D alphabet artwork, six interactive lesson examples, goals, FAQs, and language-specific inquiries
+- `/precios/` — three editable plans, clear per-lesson pricing and savings, new original artwork, FAQs, and package-aware inquiries
+- `/testimonios/` — Spanish editorial student stories, an automatic quote sequence, two exclusive lesson photographs, and a custom Blender sculpture; selected quotes are in English
 - `/blog/` — editorial journal with an original feature photograph, six distinct covers, searchable topic filters, and a custom Blender quotation sculpture
 - `/blog/[slug]/` — six complete articles targeting language-learning searches in Puerto Plata
 - `/preguntas-frecuentes/` — Spanish FAQ with all 22 existing entries represented in 21 distinct answers, search, topic filters, and original artwork
 - `/terminos/` and `/privacidad/` — separate Spanish document pages with original Blender artwork and section navigation
-- `/faq/`, `/terms/`, and `/privacy/` — compatibility aliases with canonical links to the Spanish URLs
 - Custom 404, generated sitemap, robots file, social cover, and favicon
 
-The shared header and footer work across every page. The responsive menu, FAQ accordions, article search/filters, conversation typing demo, and inquiry dialog are interactive. Reduced-motion preferences are respected.
+The shared header, mobile navigation, and footer are Spanish on every page, with consistent “Idiomas,” “Blog,” and “Hablemos” labels. Spanish URLs are the actual page routes, without English aliases or redirects. Existing page-body copy is retained. The responsive menu, FAQ accordions, article search/filters, conversation typing demo, and inquiry dialog are interactive. Reduced-motion preferences are respected.
 
 ## Project structure
 
@@ -82,9 +81,9 @@ npm run check:faq-es
 
 The export check validates generated page headings/descriptions, internal links and anchors, local images, and the presence of all six article pages.
 
-The Spanish FAQ coverage check (Node 24+) maps every original question to its translated answer. The three Spanish routes also localize navigation, footer text, and the complete inquiry dialog. The remaining pages keep their existing copy for a later translation pass.
+The Spanish FAQ coverage check (Node 24+) maps every original question to its translated answer. The complete inquiry dialog is Spanish on the Spanish-content routes, including Testimonios. The remaining pages keep their existing body and dialog copy for a later translation pass.
 
-The preview check requires the local server to be running. It requests and decodes images over HTTP across the homepage, Journal, and three Spanish pages. It also checks distinct homepage/Journal sources and the Spanish content language. Keep the terminal running while viewing localhost so images and page navigation remain available.
+The preview check requires the local server to be running. It requests and decodes images over HTTP across the homepage, Journal, and Spanish pages, including Testimonios. It also checks distinct homepage/Journal sources and the Spanish content language. Keep the terminal running while viewing localhost so images and page navigation remain available.
 
 ## Assets and animation
 
@@ -103,6 +102,10 @@ The About Carlos page has two exclusive ImageGen photographs and a new open-book
 The Languages page has two further exclusive ImageGen photographs and an original ceramic alphabet sculpture rendered in Blender. `docs/LANGUAGES-ASSETS.md` contains prompts and source paths. Its interactive lesson preview offers English or Spanish examples for everyday life, work, and complete beginners. Choosing a lesson language also selects that language in the inquiry dialog.
 
 The Pricing page adds exclusive lesson photography and a custom Blender sculpture with one, four, and eight notebooks. `docs/PRICING-ASSETS.md` records source files, the final prompt, render details, and the price calculations.
+
+The Testimonios page adds two exclusive learning photographs and an original ceramic “sí.” sculpture. Its four-story sequence has automatic progression, manual selection, pause/resume, hover/focus pausing, and reduced-motion support. Six example stories are clearly identified. `docs/TESTIMONIOS-ASSETS.md` records exact prompts, editable assets, and rebuild instructions.
+
+The homepage testimonials now use an exclusive lesson photograph and an editorial story switcher. The first-steps section is charcoal. About Carlos has a further original still-life photograph and a scroll-driven chapter timeline. Testimonios adds four factual experience metrics and a tighter CTA composition. Exact prompts and asset paths are recorded in `docs/CONVERSION-REFINEMENTS.md`.
 
 ## Deployment
 

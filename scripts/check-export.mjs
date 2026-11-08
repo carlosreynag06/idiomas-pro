@@ -27,6 +27,25 @@ async function inspect(file) {
   if ((html.match(/<h1[\s>]/g) || []).length !== 1) failures.push(`${route}: expected one H1`);
   if (!/<meta name="description" content="[^"]+"/.test(html))
     failures.push(`${route}: missing meta description`);
+  const header = html.match(/<header class="header"[^>]*>[\s\S]*?<\/header>/)?.[0] ?? '';
+  const footer = html.match(/<footer class="footer"[^>]*>[\s\S]*?<\/footer>/)?.[0] ?? '';
+  if (!header.includes('lang="es"') || !footer.includes('lang="es"'))
+    failures.push(`${route}: header and footer must be Spanish`);
+  for (const [url, label] of [
+    ['sobre-carlos', 'Sobre Carlos'],
+    ['idiomas', 'Idiomas'],
+    ['precios', 'Precios'],
+    ['testimonios', 'Testimonios'],
+    ['blog', 'Blog'],
+  ]) {
+    const link = new RegExp(`href="/${url}/"[^>]*>${label}</a>`);
+    if (!link.test(header) || !link.test(footer))
+      failures.push(`${route}: missing global Spanish navigation link ${label}`);
+  }
+  if (!/<div class="footer-wordmark"[^>]*>\s*Hablemos/.test(footer))
+    failures.push(`${route}: footer wordmark must start with capital H`);
+  if (/href="\/(?:about|languages|pricing|testimonials|faq|terms|privacy)\//.test(html))
+    failures.push(`${route}: an internal link still uses an old English route`);
   const ids = new Set([...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
   for (const m of html.matchAll(/<(?:a|link)\b[^>]*?href="([^"]+)"/g)) {
     const href = m[1];
@@ -61,6 +80,18 @@ async function inspect(file) {
   }
 }
 await walk(root);
+for (const oldRoute of [
+  'about',
+  'languages',
+  'pricing',
+  'testimonials',
+  'faq',
+  'terms',
+  'privacy',
+]) {
+  if (await exists(path.join(root, oldRoute, 'index.html')))
+    failures.push(`Old English page still generated: /${oldRoute}/`);
+}
 const blogEntries = await readdir(path.join(root, 'blog'), { withFileTypes: true });
 const count = (
   await Promise.all(
