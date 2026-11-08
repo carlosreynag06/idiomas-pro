@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { AboutCarlos } from './about-carlos';
 import Image from 'next/image';
 import {
   ArrowUpRight,
@@ -17,169 +18,6 @@ import { ConversationDemo } from './conversation-demo';
 import { Journal } from './journal';
 import { FAQBrowser } from './faq-browser';
 import { site, type PageName } from '@/lib/site';
-
-function About() {
-  return (
-    <>
-      <PageIntro
-        eyebrow="THE PERSON ACROSS THE TABLE"
-        title="A teacher. A neighbor."
-        italic="A fellow language learner."
-        description="I’m Carlos Reyna. I help people find their feet — and their voice — in English and Spanish, right here in Puerto Plata."
-      />
-      <section className="about-story-section">
-        <div className="container about-story-grid">
-          <div className="about-story-image" data-reveal>
-            <Image
-              src="/images/personal-lesson.webp"
-              alt="An engaged student practicing a new language with a personal tutor"
-              width={1000}
-              height={1200}
-              priority
-            />
-            <span className="image-label">MORE SPEAKING. MORE CONFIDENCE.</span>
-          </div>
-          <div className="about-story-copy" data-reveal>
-            <Eyebrow>IT STARTS WITH UNDERSTANDING</Eyebrow>
-            <h2>
-              I know what it’s like
-              <br />
-              <em>to find the words.</em>
-            </h2>
-            <p>
-              Living in another country changes the way you hear the world. I spent eight years in
-              the United States, learning the small things that make a conversation feel natural —
-              and the courage it takes to join one.
-            </p>
-            <p>
-              Back in the Dominican Republic, I spent years in tourism, working as a Front Desk
-              Supervisor and Night Manager. In hospitality, language is never just an exercise. It’s
-              helping someone feel welcome, solving a problem, and getting the details right when
-              they matter.
-            </p>
-            <p>
-              I’ve since taught hundreds of English and Spanish students in the Dominican Republic
-              and the US. Different lives, different goals, the same moment I love: when someone
-              realizes they can say more than they thought.
-            </p>
-            <p className="carlos-signature">
-              Carlos Reyna <span>FOUNDER & YOUR TEACHER</span>
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="experience-band">
-        <div className="container">
-          <div>
-            <strong>8</strong>
-            <span>
-              years living
-              <br />
-              in the United States
-            </span>
-          </div>
-          <div>
-            <strong>100s</strong>
-            <span>
-              of students taught
-              <br />
-              in the DR & the US
-            </span>
-          </div>
-          <div>
-            <strong>2</strong>
-            <span>
-              languages.
-              <br />
-              One personal approach.
-            </span>
-          </div>
-          <div>
-            <MapPin size={38} strokeWidth={1.2} />
-            <span>
-              Rooted right here
-              <br />
-              in Puerto Plata.
-            </span>
-          </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container">
-          <div className="section-heading">
-            <div>
-              <Eyebrow>WHAT YOU CAN EXPECT FROM ME</Eyebrow>
-              <h2>
-                Room to learn.
-                <br />
-                <em>Permission to be you.</em>
-              </h2>
-            </div>
-            <p>
-              You don’t have to arrive with confidence.
-              <br />
-              That’s something we build together.
-            </p>
-          </div>
-          <div className="values-grid">
-            {[
-              {
-                icon: HeartHandshake,
-                title: 'Patience comes first.',
-                text: 'Questions are welcome. So are mistakes. We keep trying until something clicks, without the pressure of keeping up with a room.',
-              },
-              {
-                icon: BriefcaseBusiness,
-                title: 'Experience beyond a classroom.',
-                text: 'Real hospitality work and life abroad shape the way I teach. We practice the conversations you are actually going to have.',
-              },
-              {
-                icon: Coffee,
-                title: 'A very human kind of learning.',
-                text: 'A real person, a shared table, and a plan that changes as you do. Every lesson is private, local, and in person.',
-              },
-            ].map((v) => (
-              <article key={v.title} data-reveal>
-                <v.icon size={33} strokeWidth={1.3} />
-                <h3>{v.title}</h3>
-                <p>{v.text}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="local-story">
-        <div className="container local-story-grid">
-          <div>
-            <Eyebrow>YOUR GOALS. YOUR WAY FORWARD.</Eyebrow>
-            <h2>
-              More confidence.
-              <br />
-              <em>One conversation at a time.</em>
-            </h2>
-            <p>
-              Maybe you want to speak up at work. Maybe you want to stop rehearsing every sentence
-              in your head. Maybe you’re starting from your very first word. Your reason is where we
-              begin.
-            </p>
-            <p>
-              We build lessons around the things you want to do, with patient explanations, useful
-              practice, and time to try again. You bring your goal. I’ll meet you where you are.
-            </p>
-            <BookButton>Tell me your story</BookButton>
-          </div>
-          <Image
-            src="/images/confident-learner.webp"
-            alt="An adult language learner smiling while expressing an idea with confidence"
-            width={900}
-            height={800}
-          />
-        </div>
-      </section>
-      <CTA />
-    </>
-  );
-}
 
 function Languages() {
   return (
@@ -637,9 +475,9 @@ function Legal({ privacy = false }: { privacy?: boolean }) {
 
 export function InnerPage({ page }: { page: PageName }) {
   return (
-    <main id="main">
+    <main id="main" className={page === 'about' ? 'about-page' : undefined}>
       {page === 'about' ? (
-        <About />
+        <AboutCarlos />
       ) : page === 'languages' ? (
         <Languages />
       ) : page === 'pricing' ? (

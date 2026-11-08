@@ -27,7 +27,7 @@ The static production server uses port 3000, or the `PORT` environment variable.
 ## Pages
 
 - `/` — full homepage
-- `/about/` — Carlos’s background and approach
+- `/about/` — a bespoke editorial page with Carlos’s story, experience, teaching approach, original lesson photography, a custom Blender book sculpture, and practical questions
 - `/languages/` — English and Spanish lessons
 - `/pricing/` — three editable sample plans
 - `/testimonials/` — clearly labeled sample student stories
@@ -87,6 +87,8 @@ Photographs were created with the built-in ImageGen tool, then optimized to WebP
 GSAP provides the homepage entrance sequence, viewport reveals, and an automatic conversation sequence with message entrances, typing dots, progressive replies, and scene transitions. The demo loops through three scenarios while visible, pauses offscreen or in a hidden tab, and includes a pause control. Reduced-motion visitors get static conversations with a Next control. DM Sans and Instrument Serif are served locally via Fontsource.
 
 Each article has its own original cover; journal cards do not reuse the hero photograph. The six newer prompts and source paths are documented in `docs/JOURNAL-ASSETS.md`.
+
+The About Carlos page has two exclusive ImageGen photographs and a new open-book sculpture created in Blender. Original files, exact image prompts, and the reproducible Blender command are documented in `docs/ABOUT-ASSETS.md`. Its colors are scoped to the page, header, and inquiry dialog; the shared footer keeps its existing design.
 
 ## Deployment
 
