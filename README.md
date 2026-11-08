@@ -84,7 +84,7 @@ The preview check requires the local server to be running. It requests and decod
 
 Photographs were created with the built-in ImageGen tool, then optimized to WebP with Sharp. The original Blender sculpture is retained as an editable `.blend` file and a reproducible Python script. See `docs/ASSETS.md` for exact final prompts and saved paths.
 
-GSAP provides the homepage entrance sequence and viewport reveals. The conversation demo uses React and JavaScript for progressive typing. DM Sans and Instrument Serif are served locally via Fontsource.
+GSAP provides the homepage entrance sequence, viewport reveals, and an automatic conversation sequence with message entrances, typing dots, progressive replies, and scene transitions. The demo loops through three scenarios while visible, pauses offscreen or in a hidden tab, and includes a pause control. Reduced-motion visitors get static conversations with a Next control. DM Sans and Instrument Serif are served locally via Fontsource.
 
 Each article has its own original cover; journal cards do not reuse the hero photograph. The six newer prompts and source paths are documented in `docs/JOURNAL-ASSETS.md`.
 

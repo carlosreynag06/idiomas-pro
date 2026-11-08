@@ -1,0 +1,188 @@
+.conversation-demo .demo-scene {
+  transform-origin: center;
+}
+.conversation-demo .demo-live-wave {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 15px;
+  margin-right: 3px;
+  color: var(--blue);
+}
+.conversation-demo .demo-live-wave i {
+  width: 3px;
+  height: 12px;
+  border-radius: 3px;
+  background: currentColor;
+  animation: demo-wave 0.75s ease-in-out infinite alternate;
+}
+.conversation-demo .demo-live-wave i:nth-child(2) {
+  animation-delay: -0.3s;
+  height: 7px;
+}
+.conversation-demo .demo-live-wave i:nth-child(3) {
+  animation-delay: -0.5s;
+  height: 10px;
+}
+.conversation-demo .demo-bubble.teacher {
+  min-height: 119px;
+}
+.conversation-demo .demo-bubble.student {
+  min-height: 126px;
+  padding-right: 38px;
+}
+.conversation-demo .demo-reply-stage {
+  position: relative;
+}
+.conversation-demo .demo-reply-spacer {
+  visibility: hidden;
+  display: block;
+}
+.conversation-demo .demo-reply-visible {
+  position: absolute;
+  inset: 0;
+}
+.conversation-demo .demo-accessible-reply {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.conversation-demo .demo-caret {
+  display: inline-block;
+  height: 0.9em;
+  width: 2px;
+  margin-left: 3px;
+  vertical-align: -0.06em;
+  background: currentColor;
+  visibility: hidden;
+  animation: demo-blink 0.7s step-end infinite;
+}
+.conversation-demo .demo-typing-dots {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: flex;
+  gap: 5px;
+  visibility: hidden;
+}
+.conversation-demo .demo-typing-dots i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: demo-dot 0.55s ease-in-out infinite alternate;
+}
+.conversation-demo .demo-typing-dots i:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.conversation-demo .demo-typing-dots i:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.conversation-demo .demo-success {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+}
+.conversation-demo .demo-progress {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 17px;
+}
+.conversation-demo .demo-progress-track {
+  flex: 1;
+  height: 3px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--line);
+}
+.conversation-demo .demo-progress-track i {
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--blue);
+}
+.conversation-demo .demo-progress-track.is-complete i,
+.conversation-demo:not(.is-animated) .demo-progress-track.is-current i {
+  transform: scaleX(1);
+}
+.conversation-demo .demo-bottom {
+  min-height: 63px;
+}
+.conversation-demo .demo-bottom > span {
+  max-width: 235px;
+}
+.conversation-demo .demo-bottom .demo-playback {
+  min-width: 91px;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 13px;
+}
+.conversation-demo[data-playing='false'] .demo-live-wave i,
+.conversation-demo[data-playing='false'] .demo-typing-dots i,
+.conversation-demo[data-playing='false'] .demo-caret {
+  animation-play-state: paused;
+}
+@keyframes demo-wave {
+  from {
+    transform: scaleY(0.4);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes demo-dot {
+  from {
+    transform: translateY(2px);
+    opacity: 0.35;
+  }
+  to {
+    transform: translateY(-3px);
+    opacity: 0.9;
+  }
+}
+@keyframes demo-blink {
+  50% {
+    opacity: 0;
+  }
+}
+@media (max-width: 600px) {
+  .conversation-demo .demo-bubble.student {
+    min-height: 140px;
+    padding-right: 30px;
+  }
+  .conversation-demo .demo-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+  .conversation-demo .demo-bottom > span {
+    max-width: 175px;
+    font-size: 11px;
+  }
+  .conversation-demo .demo-bottom .demo-playback {
+    min-width: 80px;
+    padding: 12px;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .conversation-demo .demo-live-wave i,
+  .conversation-demo .demo-typing-dots i,
+  .conversation-demo .demo-caret {
+    animation: none;
+  }
+}
