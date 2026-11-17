@@ -115,13 +115,13 @@ body:has(.inicio-2 .homepage) .mobile-nav small {
 .inicio-2 .homepage .english-card {
   --ink: #102059;
   --muted: #263457;
-  background: #ffa537;
+  background: #becbd8;
   color: #102059;
 }
 .inicio-2 .homepage .spanish-card {
   --ink: #102059;
   --muted: #263457;
-  background: #e7d176;
+  background: #d8d1c5;
   color: #102059;
 }
 .inicio-2 .homepage :is(.english-card, .spanish-card) > p {

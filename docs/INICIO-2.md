@@ -6,16 +6,16 @@ The comparison lives at `/inicio-2/`, with an “Inicio 2” link in the global 
 
 The theme is isolated behind `.inicio-2` selectors and `body:has(.inicio-2 .homepage)`. Its header, footer, and inquiry dialog use the alternate palette only while visiting this route.
 
-| Element | Color/treatment |
-| --- | --- |
-| Hero, language-section surface, footer | Navy `#151c3d` |
-| Main text on light surfaces | Navy `#102059` |
-| Primary actions | Blue `#2678bb` |
-| Hero accents | Blue `#548fc5`, pale periwinkle `#cdd7ef` |
-| English lesson card | Warm orange `#ffa537` |
-| Spanish lesson card | Soft yellow `#e7d176` |
-| FAQ | Uniform off-white `#f5f5f5` |
-| Final CTA | Pale blue `#aee0f8`, with dark text |
-| Other editorial sections | Alternating off-white/periwinkle with pale-blue vertical panels inspired by the supplied references |
+| Element                                | Color/treatment                                                                                     |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Hero, language-section surface, footer | Navy `#151c3d`                                                                                      |
+| Main text on light surfaces            | Navy `#102059`                                                                                      |
+| Primary actions                        | Blue `#2678bb`                                                                                      |
+| Hero accents                           | Blue `#548fc5`, pale periwinkle `#cdd7ef`                                                           |
+| English lesson card                    | Muted blue-gray `#becbd8`                                                                           |
+| Spanish lesson card                    | Warm stone `#d8d1c5`                                                                                |
+| FAQ                                    | Uniform off-white `#f5f5f5`                                                                         |
+| Final CTA                              | Pale blue `#aee0f8`, with dark text                                                                 |
+| Other editorial sections               | Alternating off-white/periwinkle with pale-blue vertical panels inspired by the supplied references |
 
 To remove the experiment, remove its header navigation entry and `app/inicio-2/`. The shared homepage component continues to serve the original homepage.
