@@ -1,0 +1,319 @@
+/* Alternate homepage: route-specific section order and color treatments. */
+body:has(.inicio-2 .homepage) {
+  --home-charcoal: #151c3d;
+  --home-citron: #aee0f8;
+  --home-sage: #eaecf3;
+  --home-action: #2678bb;
+  --home-action-hover: #1e619c;
+  --home-muted: #526b92;
+  --home-line: #c6d0e3;
+  background: #f5f5f5;
+}
+.inicio-2 .homepage,
+body:has(.inicio-2 .homepage) .booking-dialog {
+  --paper: #f5f5f5;
+  --ink: #102059;
+  --muted: #526b92;
+  --line: #c6d0e3;
+  --blue: #2678bb;
+  --blue-dark: #1e619c;
+  --lime: #aee0f8;
+  background: #f5f5f5;
+  color: #102059;
+}
+body:has(.inicio-2 .homepage) .header {
+  --paper: #151c3d;
+  --ink: #cdd7ef;
+  --line: #cdd7ef30;
+  --blue: #2678bb;
+  --blue-dark: #1e619c;
+  --lime: #aee0f8;
+  background: #151c3d;
+  color: #cdd7ef;
+}
+body:has(.inicio-2 .homepage) .header .desktop-nav a {
+  color: #cdd7ef;
+}
+body:has(.inicio-2 .homepage) .header .desktop-nav a.active,
+body:has(.inicio-2 .homepage) .header .desktop-nav a:hover {
+  color: #aee0f8;
+}
+body:has(.inicio-2 .homepage) .header .desktop-nav a::after {
+  background: #aee0f8;
+}
+body:has(.inicio-2 .homepage) .mobile-nav {
+  background: #151c3d;
+  color: #cdd7ef;
+}
+body:has(.inicio-2 .homepage) .mobile-nav a {
+  border-color: #cdd7ef30;
+}
+body:has(.inicio-2 .homepage) .mobile-nav small {
+  color: #8da9d0;
+}
+.inicio-2 .homepage .hero {
+  background: #151c3d;
+  color: #cdd7ef;
+}
+.inicio-2 .homepage .hero h1 {
+  color: #548fc5;
+}
+.inicio-2 .homepage .hero h1 em {
+  color: #cdd7ef;
+}
+.inicio-2 .homepage .hero .heading-spark {
+  color: #8158ff;
+}
+.inicio-2 .homepage .hero .little-star,
+.inicio-2 .homepage .hero .eyebrow,
+.inicio-2 .homepage .hero-description,
+.inicio-2 .homepage .hero .photo-side-note {
+  color: #b8c9e6;
+}
+.inicio-2 .homepage .hero-description strong {
+  color: #e0e7f6;
+}
+.inicio-2 .homepage .hero .button {
+  background: #2678bb;
+  color: #fff;
+}
+.inicio-2 .homepage .hero .button:hover {
+  background: #1e619c;
+}
+.inicio-2 .homepage .hero .button-secondary {
+  background: transparent;
+  border-color: #cdd7ef60;
+  color: #d6e0f4;
+}
+.inicio-2 .homepage .hero .button-secondary:hover {
+  background: #cdd7ef;
+  color: #151c3d;
+}
+.inicio-2 .homepage .photo-coordinate {
+  color: #e0e7f6;
+  background: #151c3d;
+}
+.inicio-2 .homepage .hero .hello-sticker {
+  background: #aee0f8;
+  color: #102059;
+}
+.inicio-2 .homepage .language-section {
+  --ink: #cdd7ef;
+  --muted: #b8c9e6;
+  background: #151c3d;
+  color: #cdd7ef;
+}
+.inicio-2 .homepage .language-section h2 em {
+  color: #aee0f8;
+}
+.inicio-2 .homepage .language-bottom {
+  border-color: #cdd7ef30;
+}
+.inicio-2 .homepage .language-bottom > a {
+  color: #cdd7ef;
+}
+.inicio-2 .homepage .english-card {
+  --ink: #102059;
+  --muted: #263457;
+  background: #ffa537;
+  color: #102059;
+}
+.inicio-2 .homepage .spanish-card {
+  --ink: #102059;
+  --muted: #263457;
+  background: #e7d176;
+  color: #102059;
+}
+.inicio-2 .homepage :is(.english-card, .spanish-card) > p {
+  color: #263457;
+}
+.inicio-2 .homepage :is(.english-card, .spanish-card) .language-big-word {
+  color: #151c3d;
+}
+.inicio-2 .homepage :is(.english-card, .spanish-card) :is(.pill-label, .language-tags span) {
+  border-color: #151c3d45;
+}
+.inicio-2 .homepage .english-card .button-lime,
+.inicio-2 .homepage .method-section .light-link {
+  background: #2678bb;
+  color: #fff;
+}
+.inicio-2 .homepage .english-card .button-lime:hover,
+.inicio-2 .homepage .method-section .light-link:hover {
+  background: #1e619c;
+}
+.inicio-2 .homepage .method-section {
+  background: linear-gradient(90deg, #f5f5f5 0 66.667%, #aee0f8 66.667% 100%);
+}
+.inicio-2 .homepage .conversation-demo {
+  background: #fff;
+  border-color: #bdcce3;
+  box-shadow: 12px 12px 0 #8bc7ec;
+}
+.inicio-2 .homepage .demo-bubble.teacher {
+  background: #eaecf3;
+}
+.inicio-2 .homepage .demo-bubble.student {
+  background: #aee0f8;
+}
+.inicio-2 .homepage .demo-bubble.student p,
+.inicio-2 .homepage .demo-bubble.student.has-reply p {
+  color: #102059;
+}
+.inicio-2 .homepage .proof-strip {
+  background: #151c3d;
+  color: #e0e7f6;
+  border-color: #cdd7ef30;
+}
+.inicio-2 .homepage .proof-inner > div {
+  border-color: #cdd7ef30;
+}
+.inicio-2 .homepage .proof-inner p span {
+  color: #b8c9e6;
+}
+.inicio-2 .homepage .about-preview {
+  background: linear-gradient(90deg, #aee0f8 0 33.333%, #f5f5f5 33.333% 100%);
+}
+.inicio-2 .homepage .experience-stamp {
+  background: #aee0f8;
+  color: #102059;
+}
+.inicio-2 .homepage .steps-section {
+  --ink: #102059;
+  --muted: #526b92;
+  background: linear-gradient(90deg, #eaecf3 0 66.667%, #aee0f8 66.667% 100%);
+  color: #102059;
+}
+.inicio-2 .homepage .steps-section :is(h2 em, .little-star, .step-top) {
+  color: #2678bb;
+}
+.inicio-2 .homepage .steps-section .eyebrow {
+  color: #526b92;
+}
+.inicio-2 .homepage .steps-section .step {
+  border-color: #a9bbd8;
+}
+.inicio-2 .homepage .steps-section .text-link {
+  background: #2678bb;
+  color: #fff;
+}
+.inicio-2 .homepage .steps-section .text-link:hover {
+  background: #1e619c;
+}
+.inicio-2 .home-voices {
+  background: #f5f5f5;
+}
+.inicio-2 .home-voices-link {
+  border-color: #2678bb;
+  color: #2678bb;
+}
+.inicio-2 .home-voices-link:hover {
+  background: #2678bb;
+  color: #fff;
+}
+.inicio-2 .home-voices-photo {
+  background: #151c3d;
+}
+.inicio-2 .home-voices-photo figcaption {
+  color: #aee0f8;
+}
+.inicio-2 .home-voices-photo figcaption > span:last-child {
+  color: #b8c9e6;
+}
+.inicio-2 :is(.home-voice-meta, .home-voice-author > div > span, .home-voices-note) {
+  color: #526b92;
+  border-color: #c6d0e3;
+}
+.inicio-2 :is(.home-voice-meta > span:last-child, .home-voice-mark, .home-voice-language) {
+  color: #2678bb;
+  border-color: #acbfdc;
+}
+.inicio-2 .home-voice-content blockquote {
+  color: #102059;
+}
+.inicio-2 .home-voice-choices {
+  border-color: #c6d0e3;
+}
+.inicio-2 .home-voice-choices button {
+  background: #eaecf3;
+  color: #526b92;
+}
+.inicio-2 .home-voice-choices button:hover {
+  border-color: #2678bb;
+}
+.inicio-2 .home-voice-choices button[aria-pressed='true'] {
+  background: #2678bb;
+  color: #fff;
+}
+.inicio-2 .homepage .pricing-banner {
+  background: #2678bb;
+  color: #fff;
+}
+.inicio-2 .homepage .pricing-banner :is(.eyebrow, p) {
+  color: #e0eafb;
+}
+.inicio-2 .homepage .pricing-banner .button {
+  background: #f5f5f5;
+  color: #102059;
+}
+.inicio-2 .homepage .pricing-banner .button:hover {
+  background: #aee0f8;
+}
+.inicio-2 .homepage .journal-section {
+  background: linear-gradient(90deg, #aee0f8 0 33.333%, #eaecf3 33.333% 100%);
+}
+.inicio-2 .homepage .home-faq {
+  background: #f5f5f5;
+}
+.inicio-2 .homepage .cta-section {
+  --ink: #102059;
+  background: #aee0f8;
+  color: #102059;
+}
+.inicio-2 .homepage .cta-inner > div > p,
+.inicio-2 .homepage .cta-footnote {
+  color: #3d5880;
+}
+.inicio-2 .homepage .cta-section .eyebrow {
+  color: #3d5880;
+}
+.inicio-2 .homepage .cta-section .little-star {
+  color: #2678bb;
+}
+.inicio-2 .homepage :is(a, button, summary):focus-visible {
+  outline-color: #2678bb;
+}
+.inicio-2 .homepage .hero :is(a, button):focus-visible {
+  outline-color: #aee0f8;
+}
+body:has(.inicio-2 .homepage) .booking-dialog .language-options > button.selected {
+  background: #e0edf8;
+}
+body:has(.inicio-2 .homepage) .booking-dialog .inquiry-summary {
+  background: #eaecf3;
+}
+body:has(.inicio-2 .homepage) .footer {
+  --paper: #cdd7ef;
+  --ink: #cdd7ef;
+  --blue: #2678bb;
+  --lime: #aee0f8;
+  background: #151c3d;
+  color: #cdd7ef;
+}
+body:has(.inicio-2 .homepage) .footer .brand-symbol > span + span {
+  border-color: #151c3d;
+}
+body:has(.inicio-2 .homepage) .footer :is(.footer-links > a, .footer-bottom > a) {
+  color: #dce5f6;
+}
+body:has(.inicio-2 .homepage)
+  .footer
+  :is(.footer-top > div:first-child > p, .footer-local > span:last-child, .footer-bottom) {
+  color: #adbfdd;
+}
+body:has(.inicio-2 .homepage) .footer .footer-links .eyebrow {
+  color: #b8c9e6;
+}
+body:has(.inicio-2 .homepage) .footer .footer-wordmark {
+  border-color: #cdd7ef30;
+}

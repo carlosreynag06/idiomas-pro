@@ -75,6 +75,7 @@ function Header() {
     ['Precios', '/precios/'],
     ['Testimonios', '/testimonios/'],
     ['Blog', '/blog/'],
+    ['Inicio 2', '/inicio-2/'],
   ];
   useEffect(() => {
     setMenu(false);
